@@ -1,0 +1,30 @@
+{
+    "sitemap": {
+        "logo": {
+            "src": "/images/logo.png",
+            "alt": "Logo da Empresa"
+        },
+        "navLinks": [
+            {
+                "label": "Acomodações",
+                "url": "/"
+            },
+            {
+                "label": "Galeria",
+                "url": "/#section1"
+            },
+            {
+                "label": "Serviços",
+                "url": "/#section1"
+            },
+            {
+                "label": "Sobre nós",
+                "url": "/#section1"
+            },
+            {
+                "label": "Contato",
+                "url": "/#section1"
+            }
+        ]
+    }
+}
