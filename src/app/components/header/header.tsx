@@ -16,14 +16,14 @@ const Header = ({
     hSize = 'h-14',
 }: headerProps ) => {
 
-    const { logo, navLinks } = Data.sitemap;
+    const { sitemap, navLinks } = Data;
       
 
     return(
         <header className={`sticky top-0 z-10 ${background} ${textColor} ${wSize} ${hSize}`} >
             <div className="mx-auto max-w-screen-lg h-full">
                 <div className="flex flex-row justify-between items-center py-5">
-                        <Image src={logo.src} alt={logo.alt} width={200} height={100} />
+                        <Image src={sitemap.logo.src} alt={sitemap.logo.alt} width={200} height={100} />
                     <div className="flex flex-row space-x-5">
                         {navLinks.map((navfn ,index) => (
                             <Link key={index} href={navfn.url}>{navfn.label}</Link>

@@ -3,7 +3,8 @@
         "logo": {
             "src": "/images/logo.png",
             "alt": "Logo da Empresa"
-        },
+        }
+    },
         "navLinks": [
             {
                 "label": "Acomodações",
@@ -25,6 +26,24 @@
                 "label": "Contato",
                 "url": "/#section1"
             }
-        ]
-    }
+        ],    
+        "slider":[
+        {
+            "alt": "Prainha",
+            "url": "/images/prainha.jpg"
+        },
+        {
+            "alt": "Chalé",
+            "url": "/images/chalé.png"
+        },
+        {
+            "alt": "Quintal",
+            "url": "/images/quintal.png"
+        },
+        {
+            "alt": "Day use",
+            "url": "/images/dayUse.png"
+        }
+    ]
+
 }
