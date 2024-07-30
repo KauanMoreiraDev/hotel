@@ -34,7 +34,7 @@ const Footer = ({
                         <div className="flex flex-col items-center p-2 m-1">
                             <p>Entre em Contato</p>
                             {contatos.map((cttfn, index) => (
-                                <Link href={cttfn.url}>{cttfn.nameRede}</Link>
+                                <Link key={index} href={cttfn.url}>{cttfn.nameRede}</Link>
                             ))}
                         </div>
                     </div>
