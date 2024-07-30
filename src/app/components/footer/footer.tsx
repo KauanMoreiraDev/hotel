@@ -28,7 +28,7 @@ const Footer = ({
                         <div className="flex flex-col items-center m-1">
                             <p>Intitucional</p>
                             {sitemap.navLinks.map((navfn, index) => (
-                                <Link href={navfn.url}>{navfn.label}</Link>
+                                <Link key={index} href={navfn.url}>{navfn.label}</Link>
                             ))}
                         </div>
                         <div className="flex flex-col items-center p-2 m-1">
