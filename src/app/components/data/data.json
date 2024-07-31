@@ -27,7 +27,7 @@
                 "url": "/#section1"
             }
         ],    
-        "slider":[
+        "photos":[
         {
             "alt": "Prainha",
             "url": "/images/prainha.jpg"
@@ -37,12 +37,20 @@
             "url": "/images/chalé.png"
         },
         {
-            "alt": "Quintal",
+            "alt": "Parque",
             "url": "/images/quintal.png"
         },
         {
             "alt": "Day use",
             "url": "/images/dayUse.png"
+        },
+        {
+            "alt": "Eventos",
+            "url": "/images/eventos.png"
+        },
+        {
+            "alt": "suites",
+            "url": "/images/suites.png"
         }
     ]
 
