@@ -32,7 +32,7 @@ const Header = ({
         <header className={`sticky top-0 z-10 ${background} ${textColor} ${wSize} ${hSize}`} >
             <div className="mx-auto max-w-screen-lg h-full">
                 <div className="flex flex-row justify-between items-center py-5">
-                    <Link href={sitemap.logo.url}>
+                    <Link href={sitemap.logo.url} className="mx-2">
                         <Image src={sitemap.logo.src} alt={sitemap.logo.alt} width={200} height={100} />
                     </Link>
 

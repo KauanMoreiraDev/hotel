@@ -5,8 +5,8 @@ export default function Acomodações() {
         <div className="mx-auto max-w-screen-lg">
             <div className="min-h-screen mt-6">
                 <div className="flex flex-col sm:flex-row justify-between items-center">
-                    <div className="text-5xl">
-                        Chalé
+                    <div className=" font-Caveat">
+                        <h1 className="text-6xl text-blue-500">Chalé</h1>
                         <p className="text-2xl">Tipo suiço</p>
                     </div>
                         <div className="m-2 p-2 columns-2">
@@ -24,8 +24,8 @@ export default function Acomodações() {
 
                 <div className="min-h-screen">
                     <div className="flex flex-col sm:flex-row justify-between items-center">
-                    <div className="text-5xl">
-                        Suíte
+                    <div className=" font-Caveat">
+                    <h1 className="text-6xl text-blue-500">Suíte</h1>
                         <p className="text-2xl">Apartamento</p>
                     </div>
                         <div className="m-2 p-2 columns-2">
@@ -39,7 +39,7 @@ export default function Acomodações() {
                     </div>
                     <div className="bg-slate-200 m-5 py-5">
                         <div className="flex flex-row justify-evenly">
-                            <p className="text-xl"><i className="fi fi-rc-moon-stars"></i> 2 pessoas</p>
+                            <p className="text-xl"><i className="fi fi-tc-moon"></i> 2 pessoas</p>
                             <p className="text-xl"><i className="fi fi-rr-star"></i> 2 pessoas</p>
                             <p className="text-xl"><i className="fi fi-rr-brightness"></i> 3 pessoas</p>
                         </div>
