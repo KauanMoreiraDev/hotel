@@ -1,6 +1,10 @@
+'use client'
+
 import Image from "next/image";
 import Data from "@/app/components/data/data.json";
 import Link from "next/link";
+import { useState } from "react";
+import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 
 interface headerProps {
     background? : string;
@@ -17,7 +21,12 @@ const Header = ({
 }: headerProps ) => {
 
     const { sitemap, navLinks } = Data;
-      
+
+    const [open, setOpen] = useState(true)
+
+    const navClose = () => {
+        setOpen(true)
+    }      
 
     return(
         <header className={`sticky top-0 z-10 ${background} ${textColor} ${wSize} ${hSize}`} >
@@ -26,10 +35,34 @@ const Header = ({
                     <Link href={sitemap.logo.url}>
                         <Image src={sitemap.logo.src} alt={sitemap.logo.alt} width={200} height={100} />
                     </Link>
+
+                    <div className="block sm:hidden">
+                        <button onClick={() => setOpen(!open)} className="z-10 flex items-center justify-center w-10 h-10 fixed top-1 right-0 m-4">
+                                    <div className={`transition-transform duration-1000 ${open ? 'rotate-180' : ''}`}>
+                                        {open ? <HamburgerMenuIcon className="w-10 h-10" /> : <Cross1Icon className="w-10 h-10" />}
+                                    </div>
+                                </button>
+                                {!open && (
+                                        <div className="w-screen h-screen">
+                                            <div className="bg-blue-300 opacity-70 absolute inset-0">
+
+                                                <nav className="flex flex-col items-center space-y-6 ">
+                                                    {navLinks.map((navfn ,index) => (
+                                                        <Link key={index} href={navfn.url} onClick={navClose}>{navfn.label}</Link>
+                                                    ))}
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    )}
+                    </div>
+
+
+                    <div className="hidden sm:block">
                     <div className="flex flex-row space-x-5 ">
                         {navLinks.map((navfn ,index) => (
                             <Link key={index} href={navfn.url}>{navfn.label}</Link>
                         ))}
+                        </div>
                     </div>
                 </div>  
             </div>

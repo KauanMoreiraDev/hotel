@@ -22,9 +22,7 @@ const Footer = ({
     return (
         <footer className={`${background} ${textColor} ${wSize} ${hSize}`} >
             <div className="mx-auto max-w-screen-lg min-h-full mt-3 p-5">
-                <div className="flex flex-col justify-center items-center">
-                    <div className="flex flex-row justify-center items-center">
-                        <div className="flex flex-row sm:space-x-12">
+                        <div className="flex flex-col items-center sm:flex-row sm:space-x-12">
                             <div className="flex flex-col items-start">
                                 <Image src={sitemap.logo.src} alt={sitemap.logo.alt} width={350} height={350} className="" />
                                 <p>Av. Rodolpho Morelli, 2016 <br /> Zona Rural, Santa Cruz da Conceição - SP</p>
@@ -42,11 +40,10 @@ const Footer = ({
                                 <p>Termos de uso</p>
                                 <p>Politica</p>
                             </div>
-                            <div className="hidden sm:block">
                             <div className="flex flex-col items-center">
                                 <p className="text-xl">Informações</p>
                                 <p>(19) 97124-0437</p>
-                            </div>
+                                <RedesSociais />
                             </div>
                         </div>
                     </div>
@@ -54,8 +51,7 @@ const Footer = ({
                         <p>Todos os direitos reservados 2024</p>
                         <p>Desenvolvido por Kdev</p>
                     </div>
-                </div>
-            </div>
+                
         </footer>
     );
 }

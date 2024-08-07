@@ -53,6 +53,32 @@
             "alt": "suites",
             "url": "/images/suites.png"
         }
+    ],
+    "photosChale":[
+        {
+            "alt": "Vista de fora do chalé",
+            "url": "/images/quartos/chalé/img1.png"
+        },
+        {
+            "alt": "Vista da sala 1",
+            "url": "/images/quartos/chalé/img2.jpg"
+        },
+        {
+            "alt": "Vista da sala 2",
+            "url": "/images/quartos/chalé/img3.jpg"
+        },
+        {
+            "alt": "Vista do quarto",
+            "url": "/images/quartos/chalé/img4.jpg"
+        },
+        {
+            "alt": "Vista da cozinha",
+            "url": "/images/quartos/chalé/img5.jpg"
+        },
+        {
+            "alt": "Vista do quarto",
+            "url": "/images/quartos/chalé/img6.jpg"
+        }
     ]
 
 }
