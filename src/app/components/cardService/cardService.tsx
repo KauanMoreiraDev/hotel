@@ -31,15 +31,15 @@ const CardService = ({src,
         <div className="w-full h-full my-10 py-1">
             <div className="drop-shadow-lg">
             <div className="flex flex-row justify-center">
-                {whatPosition ? <div className="flex flex-row justify-center">
-                                    <div className="w-1/2 h-full">
+                {whatPosition ? <div className="flex flex-col items-center sm:flex-row sm:justify-center">
+                                    <div className="w-11/12 sm:w-1/2 h-full">
                                     {photos.map((photos, index) => (
                                         index === src && (
-                                        <Image key={index} src={photos.url} alt={photos.alt} width={400} height={300} className="w-full h-full rounded-l-3xl"/>
+                                        <Image key={index} src={photos.url} alt={photos.alt} width={400} height={300} className="w-full h-full rounded-t-3xl sm:rounded-l-3xl"/>
                                     )
                                     ))}
                                     </div>
-                                    <div className={`w-1/2 ${background} rounded-r-3xl`}>
+                                    <div className={`w-11/12 sm:w-1/2 ${background} rounded-b-3xl sm:rounded-r-3xl`}>
                                         <div className="flex flex-col p-8">
                                             <div className="text-justify">
                                                 {label}
@@ -51,8 +51,8 @@ const CardService = ({src,
                                     </div>
                                 </div>
                                 :
-                                <div className="flex flex-row justify-center">
-                                    <div className={`w-1/2 ${background} rounded-l-3xl`}>
+                                <div className="flex flex-col-reverse items-center sm:flex-row sm:justify-center">
+                                    <div className={`w-11/12 sm:w-1/2 ${background} rounded-b-3xl sm:rounded-r-3xl`}>
                                         <div className="flex flex-col p-8">
                                             <div className="text-justify">
                                                 {label}
@@ -62,10 +62,10 @@ const CardService = ({src,
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="w-1/2 h-full">
+                                    <div className="w-11/12 sm:w-1/2 h-full">
                                     {photos.map((photos, index) => (
                                         index === src && (
-                                        <Image key={index} src={photos.url} alt={photos.alt} width={400} height={300} className="w-full h-full rounded-r-3xl"/>
+                                        <Image key={index} src={photos.url} alt={photos.alt} width={400} height={300} className="w-full h-full rounded-t-3xl sm:rounded-r-3xl"/>
                                     )
                                     ))}
                                     </div>

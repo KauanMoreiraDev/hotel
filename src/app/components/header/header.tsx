@@ -26,7 +26,7 @@ const Header = ({
                     <Link href={sitemap.logo.url}>
                         <Image src={sitemap.logo.src} alt={sitemap.logo.alt} width={200} height={100} />
                     </Link>
-                    <div className="flex flex-row space-x-5">
+                    <div className="flex flex-row space-x-5 ">
                         {navLinks.map((navfn ,index) => (
                             <Link key={index} href={navfn.url}>{navfn.label}</Link>
                         ))}

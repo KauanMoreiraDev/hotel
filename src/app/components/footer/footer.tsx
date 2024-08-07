@@ -24,11 +24,11 @@ const Footer = ({
             <div className="mx-auto max-w-screen-lg min-h-full mt-3 p-5">
                 <div className="flex flex-col justify-center items-center">
                     <div className="flex flex-row justify-center items-center">
-                        <div className="flex flex-row space-x-12">
-                            <div className="flex flex-col items-center">
+                        <div className="flex flex-row sm:space-x-12">
+                            <div className="flex flex-col items-start">
                                 <Image src={sitemap.logo.src} alt={sitemap.logo.alt} width={350} height={350} className="" />
-                                <p>rua x, nuemro y cidade z</p>
-                                <p>cep- 123791373766</p>
+                                <p>Av. Rodolpho Morelli, 2016 <br /> Zona Rural, Santa Cruz da Conceição - SP</p>
+                                <p> CEP-13629-022</p>
                             </div>
                             <div className="flex flex-col items-center m-1">
                                 <p className="text-xl">Intitucional</p>
@@ -42,10 +42,11 @@ const Footer = ({
                                 <p>Termos de uso</p>
                                 <p>Politica</p>
                             </div>
+                            <div className="hidden sm:block">
                             <div className="flex flex-col items-center">
                                 <p className="text-xl">Informações</p>
-                                <p>791373766</p>
-                                <RedesSociais />
+                                <p>(19) 97124-0437</p>
+                            </div>
                             </div>
                         </div>
                     </div>
