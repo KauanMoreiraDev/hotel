@@ -5,6 +5,7 @@ interface ButtonProps {
     rounded?: string,
     label: string,
     wSize?: string,
+    smWSize?: string,
     hSize?: string,
     disable?: boolean
 };
@@ -16,6 +17,7 @@ const Button = ({
     rounded= "rounded-lg",
     label,
     wSize= "w-2/12",
+    smWSize ,
     hSize= "h-full",
     disable= true
 }:ButtonProps) => {
@@ -23,7 +25,7 @@ const Button = ({
     return(
         <button
         onClick={onClick}
-        className={`m-2 p-3 drop-shadow-lg ${background} ${textColor} ${rounded} ${wSize} ${hSize} ${disable}`}>
+        className={`m-2 p-3 drop-shadow-lg ${background} ${textColor} ${rounded} ${wSize} ${hSize} ${disable} ${smWSize}`}>
             {label}
         </button>
     );

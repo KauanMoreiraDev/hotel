@@ -23,15 +23,15 @@ export default function Home() {
       <div className="mx-auto max-w-screen-lg">
         <div className="flex flex-col items-center sm:flex-row sm:justify-evenly my-20 p-2">
           <div className="relative">
-            <Image src={ft} alt="teste" width={300} height={450} />
-            <div className="bg-blue-400 w-full h-full absolute top-4 right-4 -z-10" />
+            <Image src={ft} alt="teste" width={300} height={450} className="w-2/3 h-3/4" />
+            <div className="bg-blue-400 w-2/3 h-full absolute top-4 -left-4 -z-10" />
           </div>
-          <div className="w-11/12 sm:w-1/2 h-full p-2">
+          <div className="w-11/12 sm:w-1/2 h-full p-3 m-3">
             <div className="flex flex-col text-justify">
               Localizado à beira do lago, o Hotel Marina do Lago oferece conforto e qualidade com foco na preservação ambiental. Proporciona uma experiência íntima com a natureza, lazer, entretenimento e diversas opções de hospedagem. Nosso objetivo é garantir a satisfação dos clientes com serviços de excelência e responsabilidade ambiental. Buscamos ser reconhecidos nacionalmente por nossa excelência em turismo, conforto e segurança, mantendo harmonia com a natureza, e valorizamos segurança, qualidade de vida, profissionalismo, ética, atendimento personalizado e responsabilidade socioambiental.
             </div>
             <div className="flex flex-row justify-end">
-              <Button label="Entre em contato" onClick={handleClick} background="bg-green-400" wSize="w-1/3" />
+              <Button label="Entre em contato" onClick={handleClick} background="bg-green-400" wSize="w-full" smWSize="sm:w-1/3" />
             </div>
           </div>
         </div>
