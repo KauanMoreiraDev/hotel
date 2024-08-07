@@ -37,41 +37,46 @@ export default function Home() {
         </div>
       <CardService
         src={1}
+        url={0}
         background="bg-blue-400"
         whatPosition={true}
         label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas cumque possimus alias aspernatur eum, voluptatibus officia maiores, facere exercitationem, doloribus fuga laudantium corrupti placeat at optio eius qui enim." />
 
       <CardService
         src={5}
+        url={0}
         background="bg-blue-400"
         whatPosition={false}
         label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas cumque possimus alias aspernatur eum, voluptatibus officia maiores, facere exercitationem, doloribus fuga laudantium corrupti placeat at optio eius qui enim." />
 
       <CardService
         src={3}
+        url={3}
         background="bg-blue-400"
         whatPosition={true}
         label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas cumque possimus alias aspernatur eum, voluptatibus officia maiores, facere exercitationem, doloribus fuga laudantium corrupti placeat at optio eius qui enim." />
 
       <CardService
         src={4}
+        url={3}
         background="bg-blue-400"
         whatPosition={false}
         label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas cumque possimus alias aspernatur eum, voluptatibus officia maiores, facere exercitationem, doloribus fuga laudantium corrupti placeat at optio eius qui enim." />
 
-      <div className="mt-4 p-1">
-        <div className="mx-auto max-w-screen-lg">
-          <div className="flex flex-col items-center">
-            <Image src={ft1} alt="logo" width={270} height={270} />
-            <RedesSociais />
-            <div className="flex flex-col items-center m-2 p-1">
-              <p>rua w, numero x , cidade y</p>
-              <p>cep-135698540</p>
+        <div id="contato" className="min-h-screen mt-4 p-1">
+                <div className="mx-auto max-w-screen-lg">
+                <div className="flex flex-col items-center">
+                    <Image src={ft1} alt="logo" width={270} height={270} />
+                    <RedesSociais />
+                    <div className="flex flex-col items-center m-2 p-1">
+                    <p>rua w, numero x , cidade y</p>
+                    <p>cep-135698540</p>
+                    </div>
+                    <div className="bg-lime-500 w-80 h-52" />
+                </div>
+                </div>
             </div>
-            <div className="bg-lime-500 w-80 h-52" />
-          </div>
-        </div>
-      </div>
+      
       </div>
     </main>
   );

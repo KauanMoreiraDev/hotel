@@ -3,24 +3,26 @@ import Image from "next/image";
 import Button from "../button/button";
 
 interface CardServiceProps {
-    src?: number,
-    background?: string,
-    label?: string,
+    src: number;
+    url: number;
+    background?: string;
+    label?: string;
     whatPosition?: boolean
 }
 
 const CardService = ({src,
+    url,
     background= 'bg-white',
     label,
     whatPosition = true
 } : CardServiceProps) => {
 
-    const { photos } = Data
+    const { navLinks , photos } = Data
 
     
 
-    const handleClick = () => {
-        console.log('saiba mais')
+    const directClick = () => {
+        window.location.href = navLinks[url].url
     }
 
     const position = `${whatPosition}`
@@ -43,7 +45,7 @@ const CardService = ({src,
                                                 {label}
                                             </div>
                                             <div className="flex justify-end">
-                                                <Button label="Saiba mais" onClick={handleClick} background="bg-green-400" wSize="w-1/3" hSize="h-1/4"/>
+                                                <Button label="Saiba mais" onClick={directClick} background="bg-green-400" wSize="w-1/3" hSize="h-1/4"/>
                                             </div>
                                         </div>
                                     </div>
@@ -56,7 +58,7 @@ const CardService = ({src,
                                                 {label}
                                             </div>
                                             <div className="flex justify-start">
-                                                <Button label="Saiba mais" onClick={handleClick} background="bg-green-400" wSize="w-1/3" hSize="h-1/4"/>
+                                                <Button label="Saiba mais" onClick={directClick} background="bg-green-400" wSize="w-1/3" hSize="h-1/4"/>
                                             </div>
                                         </div>
                                     </div>

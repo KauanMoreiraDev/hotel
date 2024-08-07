@@ -2,29 +2,30 @@
     "sitemap": {
         "logo": {
             "src": "/images/logo.png",
-            "alt": "Logo da Empresa"
+            "alt": "Logo da Empresa",
+            "url": "/"
         }
     },
         "navLinks": [
             {
                 "label": "Acomodações",
-                "url": "/"
+                "url": "/pages/acomodacoes"
             },
             {
                 "label": "Galeria",
-                "url": "/#section1"
+                "url": "/pages/galeria"
             },
             {
                 "label": "Serviços",
-                "url": "/#section1"
+                "url": "/pages/servicos"
             },
             {
                 "label": "Sobre nós",
-                "url": "/#section1"
+                "url": "/pages/sobre_nos"
             },
             {
                 "label": "Contato",
-                "url": "/#section1"
+                "url": "/pages/sobre_nos#contato"
             }
         ],    
         "photos":[
