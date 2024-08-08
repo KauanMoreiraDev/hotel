@@ -9,9 +9,7 @@ import RedesSociais from "./components/redesSociais/redesSociais";
 
 export default function Home() {
 
-  const ft = "/images/o hotel.jpg"
-  const ft1 = "/images/logo 1.png"
-
+  const { logo } = Data
 
   const handleClick = () => {
     console.log('aoba')
@@ -23,7 +21,7 @@ export default function Home() {
       <div className="mx-auto max-w-screen-lg">
         <div className="flex flex-col items-center sm:flex-row sm:justify-evenly my-20 p-2">
           <div className="relative">
-            <Image src={ft} alt="teste" width={300} height={450} className="w-2/3 h-3/4" />
+            <Image src={logo.imgHome.src} alt={logo.imgHome.alt} width={300} height={450} className="w-2/3 h-3/4" />
             <div className="bg-blue-400 w-2/3 h-full absolute top-4 -left-4 -z-10" />
           </div>
           <div className="w-11/12 sm:w-1/2 h-full p-3 m-3">
@@ -40,33 +38,33 @@ export default function Home() {
         url={0}
         background="bg-blue-400"
         whatPosition={true}
-        label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas cumque possimus alias aspernatur eum, voluptatibus officia maiores, facere exercitationem, doloribus fuga laudantium corrupti placeat at optio eius qui enim." />
+        label="Chalé tipo suíço: Um refúgio aconchegante em meio à natureza, onde charme e tranquilidade se encontram." />
 
       <CardService
         src={5}
         url={0}
         background="bg-blue-400"
         whatPosition={false}
-        label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas cumque possimus alias aspernatur eum, voluptatibus officia maiores, facere exercitationem, doloribus fuga laudantium corrupti placeat at optio eius qui enim." />
+        label="Suítes Sol, Lua ou Estrela: Conforto moderno e vistas deslumbrantes para uma conexão única com a serenidade do campo." />
 
       <CardService
         src={3}
         url={3}
         background="bg-blue-400"
         whatPosition={true}
-        label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas cumque possimus alias aspernatur eum, voluptatibus officia maiores, facere exercitationem, doloribus fuga laudantium corrupti placeat at optio eius qui enim." />
+        label="Day Use: Um dia completo de lazer, com piscinas, lago e gastronomia, tudo em um ambiente tranquilo e relaxante." />
 
       <CardService
         src={4}
         url={3}
         background="bg-blue-400"
         whatPosition={false}
-        label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas cumque possimus alias aspernatur eum, voluptatibus officia maiores, facere exercitationem, doloribus fuga laudantium corrupti placeat at optio eius qui enim." />
+        label="Eventos: O cenário ideal para eventos memoráveis, com beleza natural e personalização para tornar cada momento especial." />
 
         <div id="contato" className="min-h-screen mt-4 p-1">
                 <div className="mx-auto max-w-screen-lg">
                 <div className="flex flex-col items-center">
-                    <Image src={ft1} alt="logo" width={270} height={270} />
+                    <Image src={logo.logoImagem.src} alt={logo.logoImagem.alt} width={270} height={270} />
                     <RedesSociais />
                     <div className="flex flex-col items-center m-2 p-1">
                     <p>rua w, numero x , cidade y</p>

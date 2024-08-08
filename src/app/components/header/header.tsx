@@ -20,7 +20,7 @@ const Header = ({
     hSize = 'h-14',
 }: headerProps ) => {
 
-    const { sitemap, navLinks } = Data;
+    const { logo, navLinks } = Data;
 
     const [open, setOpen] = useState(true)
 
@@ -32,8 +32,8 @@ const Header = ({
         <header className={`sticky top-0 z-10 ${background} ${textColor} ${wSize} ${hSize}`} >
             <div className="mx-auto max-w-screen-lg h-full">
                 <div className="flex flex-row justify-between items-center py-5">
-                    <Link href={sitemap.logo.url} className="mx-2">
-                        <Image src={sitemap.logo.src} alt={sitemap.logo.alt} width={200} height={100} />
+                    <Link href={logo.logoPadrão.url} className="mx-2">
+                        <Image src={logo.logoPadrão.src} alt={logo.logoPadrão.alt} width={200} height={100} />
                     </Link>
 
                     <div className="block sm:hidden">
@@ -46,7 +46,8 @@ const Header = ({
                                         <div className="w-screen h-screen">
                                             <div className="bg-blue-300 opacity-70 absolute inset-0">
 
-                                                <nav className="flex flex-col items-center space-y-6 ">
+                                                <nav className="flex flex-col items-center space-y-6 py-6">
+                                                    <Link href={logo.logoPadrão.url} onClick={navClose}>Início</Link>
                                                     {navLinks.map((navfn ,index) => (
                                                         <Link key={index} href={navfn.url} onClick={navClose}>{navfn.label}</Link>
                                                     ))}

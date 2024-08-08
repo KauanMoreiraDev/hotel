@@ -1,9 +1,24 @@
 {
-    "sitemap": {
-        "logo": {
+    "logo": {
+        "logoPadrão": {
             "src": "/images/logo.png",
             "alt": "Logo da Empresa",
             "url": "/"
+        },
+        "logoAzul": {
+            "src": "/images/logoazul.png",
+            "alt": "Logo da Empresa",
+            "url": ""
+        },
+        "logoImagem": {
+            "src": "/images/logo 1.png",
+            "alt": "Logo da Empresa",
+            "url": ""
+        },
+        "imgHome": {
+            "src": "/images/o hotel.jpg",
+            "alt": "foto na beira do lago",
+            "url": ""
         }
     },
         "navLinks": [
@@ -28,6 +43,24 @@
                 "url": "/pages/sobre_nos#contato"
             }
         ],    
+        "institucional":[
+            {
+                "label": "Trabalhe Conosco",
+                "url": "/documents/Regras de Hospedagem.pdf"
+            },
+            {
+                "label": "Parcerias",
+                "url": "https://mail.google.com/mail/u/0/?fs=1&to=contato@hotelmarinadolago.com.br&tf=cm"
+            },
+            {
+                "label": "Termos de uso",
+                "url": "/documents/Regras de Hospedagem.pdf"
+            },
+            {
+                "label": "Política",
+                "url": ""
+            }
+        ],
         "photos":[
         {
             "alt": "Prainha",

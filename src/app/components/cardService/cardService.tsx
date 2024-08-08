@@ -40,7 +40,7 @@ const CardService = ({src,
                                     ))}
                                     </div>
                                     <div className={`w-11/12 sm:w-1/2 h-full ${background} rounded-b-3xl sm:rounded-l-none sm:rounded-r-3xl`}>
-                                        <div className="flex flex-col p-8">
+                                        <div className="flex flex-col p-5">
                                             <div className="text-justify">
                                                 {label}
                                             </div>
@@ -53,7 +53,7 @@ const CardService = ({src,
                                 :
                                 <div className="flex flex-col-reverse items-center sm:flex-row sm:justify-center">
                                     <div className={`w-11/12 sm:w-1/2 h-full ${background} rounded-b-3xl sm:rounded-r-none sm:rounded-l-3xl`}>
-                                        <div className="flex flex-col p-8">
+                                        <div className="flex flex-col p-5">
                                             <div className="text-justify">
                                                 {label}
                                             </div>
