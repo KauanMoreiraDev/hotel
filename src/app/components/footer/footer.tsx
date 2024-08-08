@@ -38,7 +38,7 @@ const Footer = ({
                             <div className="flex flex-col items-center m-1 p-2">
                                 <p className="text-xl">Institucional</p>
                                 {institucional.map((institucional, index) => (
-                                    <Link href={institucional.url} target="_blank" className="text-blue-300 m-1">{institucional.label}</Link>
+                                    <Link key={index} href={institucional.url} target="_blank" className="text-blue-300 m-1">{institucional.label}</Link>
                                 ))}
                             </div>
                             <div className="flex flex-col items-center m-1 p-2">
