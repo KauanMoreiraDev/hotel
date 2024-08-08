@@ -61,16 +61,17 @@ export default function Home() {
         whatPosition={false}
         label="Eventos: O cenário ideal para eventos memoráveis, com beleza natural e personalização para tornar cada momento especial." />
 
-        <div id="contato" className="min-h-screen mt-4 p-1">
+      <div id="contato" className="min-h-screen mt-4 p-1">
                 <div className="mx-auto max-w-screen-lg">
                 <div className="flex flex-col items-center">
                     <Image src={logo.logoImagem.src} alt={logo.logoImagem.alt} width={270} height={270} />
                     <RedesSociais />
                     <div className="flex flex-col items-center m-2 p-1">
-                    <p>rua w, numero x , cidade y</p>
-                    <p>cep-135698540</p>
+                            <p>Av. Rodolpho Morelli, 2016</p>
+                            <p>Zona Rural, Santa Cruz da Conceição - SP</p>
+                            <p> CEP-13629-022</p>
                     </div>
-                    <div className="bg-lime-500 w-80 h-52" />
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118267.54058485657!2d-47.554339932599454!3d-22.131288421826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7e28d80df514f%3A0xb31327fae98d4f34!2sHotel%20Marina%20do%20Lago!5e0!3m2!1spt-BR!2sbr!4v1723134597327!5m2!1spt-BR!2sbr" width="600" height="300" className="w-11/12" loading="lazy"></iframe>
                 </div>
                 </div>
             </div>
