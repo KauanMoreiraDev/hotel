@@ -5,11 +5,12 @@ import Slider from "./components/slider/slider";
 import Image from "next/image";
 import Button from "./components/button/button";
 import CardService from "./components/cardService/cardService";
+import CardQuarto from "./components/cardQuartos/cardQuartos";
 import RedesSociais from "./components/redesSociais/redesSociais";
 
 export default function Home() {
 
-  const { logo } = Data
+  const { logo, photos } = Data
 
   const handleClick = () => {
     console.log('aoba')
@@ -33,33 +34,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-      <CardService
-        src={1}
-        url={0}
-        background="bg-blue-400"
-        whatPosition={true}
-        label="Chalé tipo suíço: Um refúgio aconchegante em meio à natureza, onde charme e tranquilidade se encontram." />
 
-      <CardService
-        src={5}
-        url={0}
-        background="bg-blue-400"
-        whatPosition={false}
-        label="Suítes Sol, Lua ou Estrela: Conforto moderno e vistas deslumbrantes para uma conexão única com a serenidade do campo." />
+        <CardQuarto leftPosition={true} isImage={true} indexNumber={0} title="Prainha" subTitle="Lazer garantido" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
 
-      <CardService
-        src={3}
-        url={3}
-        background="bg-blue-400"
-        whatPosition={true}
-        label="Day Use: Um dia completo de lazer, com piscinas, lago e gastronomia, tudo em um ambiente tranquilo e relaxante." />
+        <CardQuarto leftPosition={false} isImage={true} indexNumber={1} title="Chalé" subTitle="Tipo suiço" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
 
-      <CardService
-        src={4}
-        url={3}
-        background="bg-blue-400"
-        whatPosition={false}
-        label="Eventos: O cenário ideal para eventos memoráveis, com beleza natural e personalização para tornar cada momento especial." />
+        <CardQuarto leftPosition={true} isImage={true} indexNumber={2} title="Área Kids" subTitle="Nosso 'quintal' " label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
+
+        <CardQuarto leftPosition={false} isImage={true} indexNumber={3} title="Day Use" subTitle="Tenha um dia maravilhoso" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
+
+        <CardQuarto leftPosition={true} isImage={true} indexNumber={4} title="Eventos" subTitle="Espaço incrivel para eventos" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
 
       <div id="contato" className="min-h-screen mt-4 p-1">
                 <div className="mx-auto max-w-screen-lg">
