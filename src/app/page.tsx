@@ -35,15 +35,15 @@ export default function Home() {
           </div>
         </div>
 
-        <CardQuarto leftPosition={true} isImage={true} indexNumber={0} title="Prainha" subTitle="Lazer garantido" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
+        <CardQuarto leftPosition={true} isImage={true} indexNumber={0} title="Prainha" subTitle="Lazer garantido" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza." labelButton="Saiba mais" onClickButton={handleClick}/>
 
-        <CardQuarto leftPosition={false} isImage={true} indexNumber={1} title="Chalé" subTitle="Tipo suiço" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
+        <CardQuarto leftPosition={false} isImage={true} indexNumber={1} title="Chalé" subTitle="Tipo suiço" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza." labelButton="Saiba mais" onClickButton={handleClick}/>
 
-        <CardQuarto leftPosition={true} isImage={true} indexNumber={2} title="Área Kids" subTitle="Nosso 'quintal' " label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
+        <CardQuarto leftPosition={true} isImage={true} indexNumber={2} title="Área Kids" subTitle="Nosso 'quintal' " label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza." labelButton="Saiba mais" onClickButton={handleClick}/>
 
-        <CardQuarto leftPosition={false} isImage={true} indexNumber={3} title="Day Use" subTitle="Tenha um dia maravilhoso" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
+        <CardQuarto leftPosition={false} isImage={true} indexNumber={3} title="Day Use" subTitle="Tenha um dia maravilhoso" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza." labelButton="Saiba mais" onClickButton={handleClick}/>
 
-        <CardQuarto leftPosition={true} isImage={true} indexNumber={4} title="Eventos" subTitle="Espaço incrivel para eventos" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza."/>
+        <CardQuarto leftPosition={true} isImage={true} indexNumber={4} title="Eventos" subTitle="Espaço incrivel para eventos" label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza." labelButton="Saiba mais" onClickButton={handleClick}/>
 
       <div id="contato" className="min-h-screen mt-4 p-1">
                 <div className="mx-auto max-w-screen-lg">

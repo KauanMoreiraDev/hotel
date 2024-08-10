@@ -31,7 +31,7 @@ const Slider = () => {
     };
 
     return (
-        <div className="relative mx-auto overflow-hidden w-1000 max-h-screen">
+        <div className="relative mx-auto overflow-hidden w-screen h-[80vh]">
             <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
                 {photos.map((photos, index) => (
                     <Image key={index} src={photos.url} alt={`Slide ${index}`} width={1500} height={1500} className="w-full h-full object-cover flex-shrink-0" />

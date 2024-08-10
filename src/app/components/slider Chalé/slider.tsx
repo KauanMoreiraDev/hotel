@@ -9,12 +9,13 @@ interface SliderChaleProps{
     rounded?: string;
     width?: string;
     smWidth?: string
+    className?: string
 }
 
 const { photosChale } = Data
 
 
-const Slider = ({rounded, width = "w-1/2", smWidth = "w-full"} : SliderChaleProps) => {
+const Slider = ({rounded, width = "w-1/2", smWidth = "w-full", className} : SliderChaleProps) => {
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {
@@ -32,7 +33,7 @@ const Slider = ({rounded, width = "w-1/2", smWidth = "w-full"} : SliderChaleProp
     };
 
     return (
-        <div className={`relative mx-auto overflow-hidden ${width} ${smWidth} h-full ${rounded} m-4`}>
+        <div className={`relative mx-auto overflow-hidden ${width} ${smWidth} h-full ${rounded} m-4 ${className}`}>
             <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
                 {photosChale.map((photos, index) => (
                     <Image key={index} src={photos.url} alt={`Slide ${index}`} width={1500} height={1500} className="w-full h-full object-cover flex-shrink-0" />
