@@ -41,7 +41,7 @@ export default function RedesSociais({
   return (
     <div className="w-full h-full">
       <div className="block sm:hidden">
-        <div className="flex flex-row justify-center gap-3 p-1 ">
+        <div className="flex flex-row justify-center gap-3 p-1 py-2">
           {contato.map((cttfn, index) => (
             <Link
               key={index}
@@ -54,7 +54,7 @@ export default function RedesSociais({
         </div>
       </div>
       <div className="hidden sm:block">
-        <div className="flex flex-row justify-center gap-3 p-1 ">
+        <div className="flex flex-row justify-center gap-3 p-1 py-2 ">
           {contato.map((cttfn, index) => (
             <Link
               key={index}

@@ -22,7 +22,7 @@ const Footer = ({
     return (
         <footer className={`${background} ${textColor} ${wSize} ${hSize}`} >
             <div className="mx-auto max-w-screen-lg min-h-full mt-3 p-5">
-                        <div className="flex flex-col items-center sm:flex-row sm:space-x-12">
+                        <div className="flex flex-col items-start sm:flex-row sm:space-x-12">
                             <div className="flex flex-col items-center sm:items-start">
                                 <Image src={logo.logoAzul.src} alt={logo.logoAzul.alt} width={350} height={350} className="mx-1" />
                                 <p>Av. Rodolpho Morelli, 2016</p>

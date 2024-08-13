@@ -29,7 +29,7 @@ const Header = ({
     }      
 
     return(
-        <header className={`sticky top-0 z-10 ${background} ${textColor} ${wSize} ${hSize}`} >
+        <header className={`sticky top-0 z-50 ${background} ${textColor} ${wSize} ${hSize}`} >
             <div className="mx-auto max-w-screen-lg h-full">
                 <div className="flex flex-row justify-between items-center py-5">
                     <Link href={logo.logoPadrão.url} className="mx-2">

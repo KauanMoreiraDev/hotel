@@ -1,52 +1,32 @@
-import SliderChale from "@/app/components/slider Chalé/slider";
+'use client'
 
-export default function Acomodações() {
-    return(
-        <div className="mx-auto max-w-screen-lg">
-            <div className="min-h-screen mt-6">
-                <div className="flex flex-col sm:flex-row justify-between items-center">
-                    <div className=" font-Caveat">
-                        <h1 className="text-6xl text-blue-500">Chalé</h1>
-                        <p className="text-2xl">Tipo suiço</p>
-                    </div>
-                        <div className="m-2 p-2 columns-2">
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rs-wifi"></i>Wi-Fi</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rr-snowflake"></i>Ar-Condicionado</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rs-screen"></i>Tv via satélite</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-tr-couch"></i>Sala de estar</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rr-refrigerator"></i>Frigobar</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rs-bed-empty"></i>Cama-box</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rs-bed-bunk"></i>Cama extra</p>
-                        </div>
+import Button from "@/app/components/button/button";
+import Image from "next/image";
+import CardServiços from "@/app/components/cardServiços/cardservicos";
+
+
+const LadingPage = () => {
+
+    const handleClick = () => {
+        console.log("Function not implemented.")
+    }
+
+    return (
+        <main className="mx-auto max-w-screen-lg">
+            <div className="bg-slate-200 w-full h-full ">
+                <div className="grid grid-cols-2">
+                    
+                        <CardServiços backgroundColor="bg-blue-300" srcImage={"/images/chalé.png"} label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza." titleColor="text-blue-600" titleFont="font-Caveat" titleLabel="Chalé Suíço" />
+                    
+                        <CardServiços width="w-3/4" backgroundColor="bg-blue-300" srcImage={"/images/suites.png"} label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza." titleColor="text-blue-600" titleFont="font-Caveat" titleLabel="Suítes" />
+                    
+                        <CardServiços backgroundColor="bg-blue-300" srcImage={"/images/chalé.png"} label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza." titleColor="text-blue-600" titleFont="font-Caveat" titleLabel="Day use" />
+
+                        <CardServiços backgroundColor="bg-blue-300" srcImage={"/images/chalé.png"} label="O Chalé Tipo Suíço do Hotel Marina do Lago é uma hospedagem charmosa e acolhedora, inspirada na arquitetura alpina. Oferece um ambiente rústico e confortável, ideal para casais ou famílias que buscam tranquilidade em meio à natureza." titleColor="text-blue-600" titleFont="font-Caveat" titleLabel="Eventos" />
                 </div>
-                <SliderChale />
             </div>
-
-                <div className="min-h-screen">
-                    <div className="flex flex-col sm:flex-row justify-between items-center">
-                    <div className=" font-Caveat">
-                    <h1 className="text-6xl text-blue-500">Suíte</h1>
-                        <p className="text-2xl">Apartamento</p>
-                    </div>
-                        <div className="m-2 p-2 columns-2">
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rs-wifi"></i>Wi-Fi</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rr-snowflake"></i>Ar-Condicionado</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rs-screen"></i>Tv via satélite</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-tr-lamp-desk"></i>Escrivaninha</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rr-refrigerator"></i>Frigobar</p>
-                            <p className="text-lg m-2"><i className="pr-2 fi fi-rs-bed-empty"></i>Cama-box</p>
-                        </div>
-                    </div>
-                    <div className="bg-slate-200 m-5 py-5">
-                        <div className="flex flex-row justify-evenly">
-                            <p className="text-xl"><i className="fi fi-tc-moon"></i> 2 pessoas</p>
-                            <p className="text-xl"><i className="fi fi-rr-star"></i> 2 pessoas</p>
-                            <p className="text-xl"><i className="fi fi-rr-brightness"></i> 3 pessoas</p>
-                        </div>
-                    </div>
-                    <div className="h-64 bg-slate-400" />
-                </div>
-
-        </div>
+        </main>
     );
 }
+
+export default LadingPage;

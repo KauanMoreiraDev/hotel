@@ -25,7 +25,7 @@ const Button = ({
     return(
         <button
         onClick={onClick}
-        className={`m-2 p-3 drop-shadow-lg ${background} ${textColor} ${rounded} ${wSize} ${hSize} ${disable} ${smWSize}`}>
+        className={`p-3 drop-shadow-lg ${background} ${textColor} ${rounded} ${wSize} ${hSize} ${disable} ${smWSize}`}>
             {label}
         </button>
     );
