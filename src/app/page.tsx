@@ -1,7 +1,7 @@
 'use client'
 
 import Data from "./components/data/data.json";
-import Slider from "./components/slider/slider";
+import SliderChale from "./components/slider Chalé/slider"
 import Image from "next/image";
 import Button from "./components/button/button";
 import CardService from "./components/cardService/cardService";
@@ -16,22 +16,35 @@ export default function Home() {
 
   const handleClick = () => {
     console.log('aoba')
+  
+  }
+  const GoToSobreNos = () => {
+    window.location.href = ("/pages/sobre_nos")
+  }
+
+  const GoToAcomodacoes = () => {
+    window.location.href = ("/pages/acomodacoes")
+  }
+
+  const GoToServicos = () => {
+    window.location.href = ("/pages/servicos")
   }
 
   return (
     <main>
-      <div className="relative w-screen h-[80vh]">
+      <div className="inicio relative w-screen h-[80vh]">
         <div className="absolute inset-0 bg-[url('/images/testefundo.png')] bg-cover opacity-70"></div>
         <div className="relative flex flex-col justify-center items-center w-full min-h-full z-10">
 
           <Image src={"/images/logo.png"} alt="" width={1200} height={1200} className="w-1/3 h-1/3 py-8" />
           <RedesSociais />
-          <Button onClick={handleClick} label="Reservar já" background="bg-green-400" />
+          <Button onClick={handleClick} label="Reservar já" background="bg-green-400" backgroundHover="hover:bg-blue-600"/>
 
         </div>
       </div>
 
-      <div className="mx-auto max-w-screen-lg">
+      <div className="w-screen bg-[url('/images/testefundo2.png')] bg-center">
+      <div className="Apresentação mx-auto max-w-screen-lg">
         <div className="flex flex-col items-center sm:flex-row sm:justify-evenly my-20 p-2">
           <div className="relative">
             <Image src={logo.imgHome.src} alt={logo.imgHome.alt} width={300} height={450} className="w-2/3 h-3/4" />
@@ -42,38 +55,45 @@ export default function Home() {
               Localizado à beira do lago, o Hotel Marina do Lago oferece conforto e qualidade com foco na preservação ambiental. Proporciona uma experiência íntima com a natureza, lazer, entretenimento e diversas opções de hospedagem. Nosso objetivo é garantir a satisfação dos clientes com serviços de excelência e responsabilidade ambiental. Buscamos ser reconhecidos nacionalmente por nossa excelência em turismo, conforto e segurança, mantendo harmonia com a natureza, e valorizamos segurança, qualidade de vida, profissionalismo, ética, atendimento personalizado e responsabilidade socioambiental.
             </div>
             <div className="flex flex-row justify-end">
-              <Button label="Entre em contato" onClick={handleClick} background="bg-green-400" wSize="w-full" smWSize="sm:w-1/3" />
+              <Button label="Entre em contato" onClick={GoToSobreNos} background="bg-green-400" backgroundHover="hover:bg-blue-500" wSize="w-full" smWSize="sm:w-1/3" />
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="grid grid-cols-4 my-3">
-          <CardSimple label="Estacionamento gratuito" />
-          <CardSimple label="Wi-Fi externo" />
-          <CardSimple label="Piscina, academia, bar, restaurante, prainha, Caique, redes descanso, sala de jogos, tv satelite, campo fut/volei, pesca" />
-          <CardSimple label="Pensão completa" />
-        </div>
-
+      <div className="Atributos hotel mx-auto max-w-screen-lg">
+        <SliderChale />
         <div className="flex flex-row justify-center p-2 m-1">
-          <Button onClick={handleClick} label="Ver todos os serviços" background="bg-green-500" wSize="1/2" />
+          <Button onClick={GoToServicos} label="Ver todos os serviços" background="bg-green-500" backgroundHover="hover:bg-blue-500" wSize="1/2" />
         </div>
+      </div>
 
-        <div className="grid grid-cols-3">
-          <CardServicos backgroundColor="bg-blue-400" titleFont="font-Caveat" titleLabel="Chalés" titleColor="text-white" label="Nosso Chalé é do tipo Suíço e bem aconchegante"/>
-          
-          <CardServicos backgroundColor="bg-blue-400" titleFont="font-Caveat" titleLabel="Suítes" titleColor="text-white" label="Nosso Chalé é do tipo Suíço e bem aconchegante"/>
-          
-          <CardServicos backgroundColor="bg-blue-400" titleFont="font-Caveat" titleLabel="Day Use" titleColor="text-white" label="Nosso Chalé é do tipo Suíço e bem aconchegante"/>
+      </div>
 
-          <CardServicos backgroundColor="bg-blue-400" titleFont="font-Caveat" titleLabel="Palestras" titleColor="text-white" label="Nosso Chalé é do tipo Suíço e bem aconchegante"/>
+      <div className="Locais hotel bg-blue-300 w-screen ">
+      <div className="bg-[url('/images/testefundoazul.png')] bg-contain w-screen ">
+        <div className="grid grid-cols-3 max-w-screen-lg mx-auto">
+          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Chalés" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nosso Chalé é do tipo Suíço e bem aconchegante"  onclick={GoToAcomodacoes} />
 
-          <CardServicos backgroundColor="bg-blue-400" titleFont="font-Caveat" titleLabel="Eventos" titleColor="text-white" label="Nosso Chalé é do tipo Suíço e bem aconchegante"/>
+          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Suítes" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nossas suítes trazem o conforto que você precisa para relaxar" onclick={GoToAcomodacoes} />
+
+          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Day Use" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Desfrute de nossos serviços pagando uma singela diária" onclick={GoToAcomodacoes} />
+
+          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Palestras" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Sala ampla com carteiras para sua palestra" onclick={GoToAcomodacoes} />
+
+          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Eventos" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Utilize do nosso espaço para ter as melhroes fotos do seu evento" onclick={GoToAcomodacoes} />
         </div>
+        <div className="flex flex-col items-center my-10">
+          <Button onClick={handleClick} label="Ver todos as acomodações" background="bg-green-500" backgroundHover="hover:bg-blue-600" wSize="1/2" />
+        </div>
+      </div>
+      </div>
 
-        <div id="contato" className="min-h-screen mt-4 p-1">
+      <div id="contato" className="mx-auto max-w-screen-lg">
+        <div className="min-h-screen mt-4 p-1">
           <div className="mx-auto max-w-screen-lg">
             <div className="flex flex-col items-center">
-              <Image src={logo.logoImagem.src} alt={logo.logoImagem.alt} width={270} height={270} className="my-3"/>
+              <Image src={logo.logoImagem.src} alt={logo.logoImagem.alt} width={270} height={270} className="my-3" />
               <RedesSociais />
               <div className="flex flex-col items-center m-2 p-1">
                 <p>Av. Rodolpho Morelli, 2016</p>
@@ -84,8 +104,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-
       </div>
+
     </main>
   );
 }

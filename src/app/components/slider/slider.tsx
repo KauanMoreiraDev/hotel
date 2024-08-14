@@ -13,6 +13,7 @@ const {photos} = Data
 
 
 const Slider = () => {
+    
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {

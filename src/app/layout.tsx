@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
+
+
+
 import Header from "./components/header/header"
 import Footer from "./components/footer/footer"
 
@@ -21,7 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header background="bg-blue-400" textColor="text-white" wSize="min-w-screen" hSize="h-full" />
         {children}
-        <Footer wSize="min-w-screen"/>
+        <Footer wSize="min-w-screen" background="bg-blue-400" textColor="text-white"/>
       </body>
     </html>
   );

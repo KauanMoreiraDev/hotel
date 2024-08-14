@@ -2,6 +2,7 @@
 
 import Data from "@/app/components/data/data.json"
 import Image from 'next/image';
+import CardSimple from "../cardSimple/cardsimple";
 import { useEffect, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 
@@ -12,35 +13,68 @@ interface SliderChaleProps{
     className?: string
 }
 
-const { photosChale } = Data
+const labels = [
+    { label : "Estacionamento gratuito" },
+    { label : "Piscinas" },
+    { label : "Academia" },
+    { label : "Bar" },
+    { label : "Restaurante" },
+    { label : "Prainha" },
+    { label : "Caiques" },
+    { label : "Redes de descanso" },
+    { label : "Sala de jogos" },
+    { label : "Tv via satelite" },
+    { label : "Campo de futebol" },
+    { label : "Campo de volei" },
+    { label : "Pesca no lago" },
+    { label : "Pensão completa" }
+]
 
 
 const Slider = ({rounded, width = "w-1/2", smWidth = "w-full", className} : SliderChaleProps) => {
+
+    const handleClick = () =>{
+        console.log("teste")
+    }
+    
+        useEffect(() => {
+            const interval = setInterval(nextSlide, 3500);
+            
+            return () => clearInterval(interval);
+        }, []);
+    
     const [current, setCurrent] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(nextSlide, 3000);
-
-        return () => clearInterval(interval);
-    }, []);
+    const itemsToShow = 4;
+    const totalItems = labels.length;
+    const totalPages = Math.ceil(totalItems / itemsToShow);
 
     const nextSlide = () => {
-        setCurrent((prev) => (prev === photosChale.length - 1 ? 0 : prev + 1));
+        setCurrent((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
+        console.log(current, nextSlide)
     };
-
+    
     const prevSlide = () => {
-        setCurrent((prev) => (prev === 0 ? photosChale.length - 1 : prev - 1));
+        setCurrent((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
+        console.log(current, prevSlide)
     };
 
     return (
-        <div className={`relative mx-auto overflow-hidden ${width} ${smWidth} h-full ${rounded} m-4 ${className}`}>
+        <div className={`relative mx-auto overflow-hidden ${width} ${smWidth} h-full ${rounded} my-4 py-4 ${className}`}>
+            
+            {/* perguntar para o gu sobre isso, comparação com o de baixo <div className={`flex transition-transform ease-in-out duration-500 transform:translate-x-${current * 100/itemsToShow}%`}> */}
+
             <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
-                {photosChale.map((photos, index) => (
-                    <Image key={index} src={photos.url} alt={`Slide ${index}`} width={1500} height={1500} className="w-full h-full object-cover flex-shrink-0" />
-                ))}
-            </div>
-            <button onClick={prevSlide} className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 w-1/12 h-screen opacity-100"><ChevronLeftIcon className="text-white" /></button>
-            <button onClick={nextSlide} className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 w-1/12 h-screen opacity-100"><ChevronRightIcon className="text-white" /></button>
+                
+                    {labels.map((labels, index) => (
+                        <div key={index} className="flex-shrink-0 w-1/4">
+                            <CardSimple label={labels.label} width="1/2"/>
+                        </div>
+                    ))}
+                </div>
+            
+
+            <button onClick={prevSlide} className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 flex justify-start items-center w-1/12 h-full opacity-100"><ChevronLeftIcon className="text-white" /></button>
+            <button onClick={nextSlide} className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 flex justify-end items-center w-1/12 h-full opacity-100"><ChevronRightIcon className="text-white" /></button>
         </div>
 
     );
