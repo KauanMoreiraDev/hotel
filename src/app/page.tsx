@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </div>
 
-      <iframe src="https://calendar.google.com/calendar/embed?src=testekdev%40gmail.com&ctz=America%2FSao_Paulo" className="mx-auto max-w-screen-lg" width="800" height="600" scrolling="no"></iframe>
+      <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3mIPT8Dei1zonWkvM1CG1sWaRNHtbohl2zRrNRoLAxehvgDPixTpY7nOjSohrRvnbkfMC-KBrp" className="mx-auto max-w-screen-lg overflow-auto bg-green-400 rounded-3xl" width="1000" height="600"  scrolling="yes"></iframe>
 
       <div className="Atributos hotel mx-auto max-w-screen-lg">
         <SliderChale />
@@ -73,7 +73,7 @@ export default function Home() {
       </div>
 
       <div className="Locais hotel bg-blue-300 w-screen ">
-      <div className="bg-[url('/images/testefundoazul.png')] bg-contain w-screen ">
+      <div className="bg-[url('/images/testefundoazul.png')] bg-cover bg-center w-screen ">
         <div className="grid grid-cols-3 max-w-screen-lg mx-auto">
           <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Chalés" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nosso Chalé é do tipo Suíço e bem aconchegante"  onclick={GoToAcomodacoes} />
 
