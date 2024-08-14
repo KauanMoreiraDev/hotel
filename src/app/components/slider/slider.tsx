@@ -5,14 +5,41 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 
+interface SliderProps{
+    constSrc: "photosExterna" | "photosAlimentacao" | "photosComida"
+}
+
 const handleClick = () => {
     console.log('você entrou em contato')
 }
 
-const {photos} = Data
+const photosExterna = [
+    { src: "/images/servicos/pesca.jpg"},
+    { src: "/images/servicos/caique.jpg"},
+    { src: "/images/servicos/piscinas.jpg"},
+    { src: "/images/servicos/redes.jpg"},
+    { src: "/images/servicos/campofut.jpg"},
+    { src: "/images/servicos/campovolei.jpg"},
+    { src: "/images/servicos/academia.jpg"},
+]
 
 
-const Slider = () => {
+const photosAlimentacao = [
+    { src: "/images/servicos/bar.jpg"},
+    { src: "/images/servicos/bar1.jpeg"},
+    { src: "/images/servicos/restaurante.jpeg"},
+    { src: "/images/servicos/restaurante2.jpg"},
+]
+
+const photosComida = [
+    { src: "/images/servicos/alimentação/cafedamanha.jpg"},
+    { src: "/images/servicos/alimentação/almoco.jpg"},
+    { src: "/images/servicos/alimentação/almoco1.jpg"},
+    { src: "/images/servicos/alimentação/cafedatarde.jpg"},
+    { src: "/images/servicos/alimentação/jantar.jpg"}
+]
+
+const Slider = ({constSrc} : SliderProps) => {
     
     const [current, setCurrent] = useState(0);
 
@@ -22,7 +49,7 @@ const Slider = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const numberImagens = photos.slice(0, 5)
+    const numberImagens = constSrc === "photosExterna" ? photosExterna : constSrc === "photosAlimentacao" ? photosAlimentacao : photosComida.slice(0, 7)
 
     const nextSlide = () => {
         setCurrent((prev) => (prev === numberImagens.length - 1 ? 0 : prev + 1));
@@ -33,10 +60,10 @@ const Slider = () => {
     };
 
     return (
-        <div className="relative mx-auto overflow-hidden w-screen h-screen">
+        <div className="relative mx-auto overflow-hidden max-w-screen-lg h-[70vh] rounded-3xl shadow-xl">
             <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
-                {photos.map((photos, index) => (
-                    <Image key={index} src={photos.url} alt={`Slide ${index}`} width={1500} height={1500} className="w-full h-full object-cover flex-shrink-0" />
+                {numberImagens.map((photos, index) => (
+                    <Image key={index} src={photos.src} alt={`Slide ${index}`} width={1500} height={1500} className="w-full h-full object-cover flex-shrink-0 " />
                 ))}
             </div>
             <button onClick={prevSlide} className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 w-1/12 h-screen opacity-100"><ChevronLeftIcon className="text-white" /></button>

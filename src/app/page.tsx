@@ -61,6 +61,8 @@ export default function Home() {
         </div>
       </div>
 
+      <iframe src="https://calendar.google.com/calendar/embed?src=testekdev%40gmail.com&ctz=America%2FSao_Paulo" className="mx-auto max-w-screen-lg" width="800" height="600" scrolling="no"></iframe>
+
       <div className="Atributos hotel mx-auto max-w-screen-lg">
         <SliderChale />
         <div className="flex flex-row justify-center p-2 m-1">
