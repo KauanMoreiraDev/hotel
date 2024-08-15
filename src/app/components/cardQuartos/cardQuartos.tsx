@@ -1,7 +1,7 @@
 import Data from "@/app/components/data/data.json"
 import Image from "next/image";
 import Button from "../button/button";
-import SliderChale from "../slider Chalé/slider";
+import SliderChale from "../slide/slider";
 
 interface CardProps {
     leftPosition?: boolean

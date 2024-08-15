@@ -59,7 +59,7 @@ const Slider = ({rounded, width = "w-1/2", smWidth = "w-full", className} : Slid
     };
 
     return (
-        <div className={`relative mx-auto overflow-hidden ${width} ${smWidth} h-full ${rounded} my-4 py-4 ${className}`}>
+        <div className={`relative mx-auto overflow-hidden ${width} ${smWidth} h-full ${rounded} py-16 ${className}`}>
             
             {/* perguntar para o gu sobre isso, comparação com o de baixo <div className={`flex transition-transform ease-in-out duration-500 transform:translate-x-${current * 100/itemsToShow}%`}> */}
 

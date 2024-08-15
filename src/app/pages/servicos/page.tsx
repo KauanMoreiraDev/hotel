@@ -1,7 +1,7 @@
 "use client"
 
 import CardSimple from "@/app/components/cardSimple/cardsimple";
-import Slider from "@/app/components/slider/slider";
+import Slider from "@/app/components/sliderImages/slider";
 
 const Serviços = () => {
 
