@@ -30,8 +30,8 @@ export default function Home() {
 
   return (
     <main>
-      <div className="inicio relative w-screen h-[80vh]">
-        <div className="absolute inset-0 bg-[url('/images/testefundo.png')] bg-cover opacity-70"></div>
+      <div className="inicio relative w-screen h-[90vh]">
+        <div className="absolute inset-0 bg-[url('/images/testefundo.png')] bg-cover blur-sm"></div>
         <div className="relative flex flex-col justify-center items-center w-full min-h-full z-10">
 
           <Image src={"/images/logo.png"} alt="" width={1200} height={1200} className="w-1/3 h-1/3 py-8" />
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-screen bg-[url('/images/testefundo2.png')] bg-center">
+      <div className="w-screen bg-[url('/images/fundoondas.png')]">
       <div className="Apresentação mx-auto max-w-screen-lg">
         <div className="flex flex-col items-center sm:flex-row sm:justify-evenly py-16">
           <div className="relative">
@@ -90,11 +90,13 @@ export default function Home() {
       </div>
       </div>
 
-      <div id="contato" className="mx-auto max-w-screen-lg">
+      <div id="contato" className="mx-auto max-w-screen-lg my-3">
 
           <SliderDepoimentos  />
 
+            <div className="flex justify-center">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118267.54058485657!2d-47.554339932599454!3d-22.131288421826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7e28d80df514f%3A0xb31327fae98d4f34!2sHotel%20Marina%20do%20Lago!5e0!3m2!1spt-BR!2sbr!4v1723134597327!5m2!1spt-BR!2sbr" width="600" height="300" className="w-11/12" loading="lazy"></iframe>
+            </div>
             </div>
           
 

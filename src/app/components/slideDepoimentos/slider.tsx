@@ -4,7 +4,7 @@ import Data from "@/app/components/data/data.json"
 import Image from 'next/image';
 import CardSimple from "../cardSimple/cardsimple";
 import { useEffect, useState } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
+import { ChevronLeftIcon, ChevronRightIcon, StarFilledIcon, PersonIcon } from "@radix-ui/react-icons";
 
 interface SliderChaleProps {
     rounded?: string;
@@ -14,20 +14,32 @@ interface SliderChaleProps {
 }
 
 const labels = [
-    { label: "Estacionamento gratuito" },
-    { label: "Piscinas" },
-    { label: "Academia" },
-    { label: "Bar" },
-    { label: "Restaurante" },
-    { label: "Prainha" },
-    { label: "Caiques" },
-    { label: "Redes de descanso" },
-    { label: "Sala de jogos" },
-    { label: "Tv via satelite" },
-    { label: "Campo de futebol" },
-    { label: "Campo de volei" },
-    { label: "Pesca no lago" },
-    { label: "Pensão completa" }
+
+    {   
+        ranking: 4,
+        nome: "Paula Tejando",
+        label: "iaifjahofj"
+    },
+    {   
+        ranking: 3,
+        nome: "Tomás Turbando",
+        label: "Piscinas"
+    },
+    {   
+        ranking: 5,
+        nome: "Oscar Alho",
+        label: "Academia"
+    },
+    {   
+        ranking: 4,
+        nome: "Paula Noku",
+        label: "Bar"
+    },
+    {   
+        ranking: 3,
+        nome: "Cuca Beludo",
+        label: "Restaurante"
+    },
 ]
 
 
@@ -59,26 +71,40 @@ const Slider = ({ rounded, width = "w-full", smWidth = "w-full", className }: Sl
     };
 
     return (
-        <div className={`relative mx-auto overflow-hidden ${width} ${smWidth} h-full ${rounded} py-16 ${className}`}>
+        <div className={`relative overflow-hidden ${width} ${smWidth} h-full ${rounded} py-16 ${className} flex flex-row items-center justify-center`}>
+
+            <button onClick={prevSlide} className="p-2 mx-2 flex justify-start items-center rounded-full bg-slate-500"><ChevronLeftIcon className="text-white" /></button>
 
             {/* perguntar para o gu sobre isso, comparação com o de baixo <div className={`flex transition-transform ease-in-out duration-500 transform:translate-x-${current * 100/itemsToShow}%`}> */}
+            {/* 
+            <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}> */}
 
-            <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
-
+            <div className={`relative flex flex-col items-start justify-items-center w-11/12 h-full p-12 rounded-3xl ${current}`}>
+                <div className="absolute inset-0 rounded-3xl bg-slate-300 backdrop-blur-sm" />
                 {labels.map((labels, index) => (
-                    <div key={index} className="flex flex-col items-start justify-items-center w-60 h-full bg-red-400 rounded-3xl">
-                        <p>Estrelas</p>
-                        <p>Jacinbto Silva Pinto</p>
-                        <p>{labels.label}</p>
+                    <div key={index} className="relative flex flex-col items-start justify-items-center w-full h-full">
+
+                        <div className="flex flex-row justify-start">
+                            {Array.from({length: labels.ranking}).map((_, index) => (
+                                <StarFilledIcon key={index} className="text-yellow-400 w-6 h-6" />
+
+                            ))}
+                            
+                        </div>
+
+                        <div className="text-lg flex flex-row">
+                            <PersonIcon className="w-1/2 h-1/2" />
+                            {labels.nome}
+                        </div>
+                        <p className="py-5 h-16">{labels.label}</p>
                     </div>
                 ))}
             </div>
 
-
-            <button onClick={prevSlide} className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 flex justify-start items-center w-1/12 h-full opacity-100"><ChevronLeftIcon className="text-white" /></button>
-            <button onClick={nextSlide} className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 flex justify-end items-center w-1/12 h-full opacity-100"><ChevronRightIcon className="text-white" /></button>
+            <button onClick={nextSlide} className="p-2 mx-2 flex justify-start items-center rounded-full bg-slate-500">
+                <ChevronRightIcon className="text-white" />
+            </button>
         </div>
-
     );
 };
 

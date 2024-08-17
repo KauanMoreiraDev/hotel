@@ -47,7 +47,7 @@ export default function RedesSociais({
               key={index}
               href={cttfn.link}
               target="_blank"
-              className="rounded-full hover:text-blue-600 hover:scale-110">
+              className="rounded-full text-black hover:text-slate-800 hover:scale-125">
               <i className={cttfn.icon} />
             </Link>
           ))}
@@ -60,7 +60,7 @@ export default function RedesSociais({
               key={index}
               href={cttfn.link}
               target="_blank"
-              className="rounded-full hover:text-blue-700 hover:scale-110">
+              className="rounded-full text-black hover:text-slate-800 hover:scale-125">
               <i className={cttfn.iconSm} />
             </Link>
           ))}

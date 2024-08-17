@@ -14,20 +14,34 @@ interface SliderChaleProps{
 }
 
 const labels = [
-    { label : "Estacionamento gratuito" },
-    { label : "Piscinas" },
-    { label : "Academia" },
-    { label : "Bar" },
-    { label : "Restaurante" },
-    { label : "Prainha" },
-    { label : "Caiques" },
-    { label : "Redes de descanso" },
-    { label : "Sala de jogos" },
-    { label : "Tv via satelite" },
-    { label : "Campo de futebol" },
-    { label : "Campo de volei" },
-    { label : "Pesca no lago" },
-    { label : "Pensão completa" }
+    {   icons: "/images/servicos/icons/pescaria.png",
+        label: "Estacionamento gratuito" },
+    {   icons: "/images/servicos/icons/natacao.png",
+        label: "Piscinas" },
+    {   icons: "/images/servicos/icons/academia.png",
+        label: "Academia" },
+    {   icons: "/images/servicos/icons/cerveja.png",
+        label: "Bar" },
+    {   icons: "/images/servicos/icons/restaurante.png",
+        label: "Restaurante" },
+    {   icons: "/images/servicos/icons/praia.png",
+        label: "Prainha" },
+    {   icons: "/images/servicos/icons/pescaria.png",
+        label: "Caiques" },
+    {   icons: "/images/servicos/icons/pescaria.png",
+        label: "Redes de descanso" },
+    {   icons: "/images/servicos/icons/bilhar.png",
+        label: "Sala de jogos" },
+    {   icons: "/images/servicos/icons/televisao.png",
+        label: "Tv via satelite" },
+    {   icons: "/images/servicos/icons/bola.png",
+        label: "Campo de futebol" },
+    {   icons: "/images/servicos/icons/voleibol.png",
+        label: "Campo de volei" },
+    {   icons: "/images/servicos/icons/pescaria.png",
+        label: "Pesca no lago" },
+    {   icons: "/images/servicos/icons/pescaria.png",
+        label: "Pensão completa" }
 ]
 
 
@@ -67,7 +81,7 @@ const Slider = ({rounded, width = "w-1/2", smWidth = "w-full", className} : Slid
                 
                     {labels.map((labels, index) => (
                         <div key={index} className="flex-shrink-0 w-1/4">
-                            <CardSimple label={labels.label} width="1/2"/>
+                            <CardSimple icons={labels.icons} label={labels.label} width="1/2"/>
                         </div>
                     ))}
                 </div>
