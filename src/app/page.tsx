@@ -14,7 +14,7 @@ export default function Home() {
 
   const handleClick = () => {
     console.log('aoba')
-  
+
   }
   const GoToSobreNos = () => {
     window.location.href = ("/pages/sobre_nos")
@@ -31,17 +31,16 @@ export default function Home() {
   return (
     <main>
       <div className="inicio relative w-screen h-[90vh]">
-        <div className="absolute inset-0 bg-[url('/images/testefundo.png')] bg-cover blur-sm"></div>
+        <div className="absolute inset-0 bg-[url('/images/drone1.jpg')] bg-cover blur-sm"></div>
         <div className="relative flex flex-col justify-center items-center w-full min-h-full z-10">
 
           <Image src={"/images/logo.png"} alt="" width={1200} height={1200} className="w-1/3 h-1/3 py-8" />
-          <RedesSociais />
-          <Button onClick={handleClick} label="Reservar já" background="bg-green-400" backgroundHover="hover:bg-blue-600"/>
+          <RedesSociais textColor="text-slate-950" />
+          <Button onClick={handleClick} label="Reservar já" background="bg-blue-500" backgroundHover="hover:bg-blue-600" textColor="text-white" textSize="font-semibold" />
 
         </div>
       </div>
 
-      <div className="w-screen bg-[url('/images/fundoondas.png')]">
       <div className="Apresentação mx-auto max-w-screen-lg">
         <div className="flex flex-col items-center sm:flex-row sm:justify-evenly py-16">
           <div className="relative">
@@ -58,47 +57,44 @@ export default function Home() {
           </div>
         </div>
 
-      {/* <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3mIPT8Dei1zonWkvM1CG1sWaRNHtbohl2zRrNRoLAxehvgDPixTpY7nOjSohrRvnbkfMC-KBrp" className="mx-auto max-w-screen-lg overflow-auto bg-green-400 rounded-3xl" width="1000" height="600"  scrolling="yes"></iframe> */}
+        {/* <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3mIPT8Dei1zonWkvM1CG1sWaRNHtbohl2zRrNRoLAxehvgDPixTpY7nOjSohrRvnbkfMC-KBrp" className="mx-auto max-w-screen-lg overflow-auto bg-green-400 rounded-3xl" width="1000" height="600"  scrolling="yes"></iframe> */}
 
-              <Slide />
+        <Slide />
         <div className="button">
-        <div className="flex flex-row justify-center py-7">
-          <Button onClick={GoToServicos} label="Ver todos os serviços" background="bg-green-500" backgroundHover="hover:bg-blue-500" wSize="1/2" />
+          <div className="flex flex-row justify-center py-5">
+            <Button onClick={GoToServicos} label="Ver todos os serviços" textColor="text-white" textSize="font-semibold" background="bg-blue-400" backgroundHover="hover:bg-blue-600" wSize="1/2" />
+          </div>
         </div>
-        </div>
-      </div>
-      
-
       </div>
 
       <div className="Locais hotel bg-blue-300 w-screen ">
-      <div className="bg-[url('/images/testefundoazul.png')] bg-cover bg-center w-screen ">
-        <div className="grid grid-cols-3 max-w-screen-lg mx-auto">
-          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Chalés" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nosso Chalé é do tipo Suíço e bem aconchegante"  onclick={GoToAcomodacoes} />
+        <div className="bg-[url('/images/testefundoazul.png')] bg-cover bg-center w-screen ">
+          <div className="grid grid-cols-3 max-w-screen-lg mx-auto">
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Chalés" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nosso Chalé é do tipo Suíço e bem aconchegante" onclick={GoToAcomodacoes} />
 
-          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Suítes" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nossas suítes trazem o conforto que você precisa para relaxar" onclick={GoToAcomodacoes} />
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Suítes" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nossas suítes trazem o conforto que você precisa para relaxar" onclick={GoToAcomodacoes} />
 
-          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Day Use" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Desfrute de nossos serviços pagando uma singela diária" onclick={GoToAcomodacoes} />
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-yellow-600" titleFont="font-Caveat" titleLabel="Day Use" titleColor="text-yellow-500" colorButoon="bg-yellow-500" label="Desfrute de nossos serviços pagando uma singela diária" onclick={GoToAcomodacoes} />
 
-          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Palestras" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Sala ampla com carteiras para sua palestra" onclick={GoToAcomodacoes} />
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-gray-600" titleFont="font-Caveat" titleLabel="Palestras" titleColor="text-gray-400" colorButoon="bg-gray-400" label="Sala ampla com carteiras para sua palestra" onclick={GoToAcomodacoes} />
 
-          <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Eventos" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Utilize do nosso espaço para ter as melhroes fotos do seu evento" onclick={GoToAcomodacoes} />
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-green-600" titleFont="font-Caveat" titleLabel="Eventos" titleColor="text-green-500" colorButoon="bg-green-400" label="Utilize do nosso espaço para ter as melhores fotos do seu evento" onclick={GoToAcomodacoes} />
+          </div>
+          <div className="flex flex-col items-center py-10">
+            <Button onClick={handleClick} label="Ver todos as acomodações" background="bg-white" textSize="font-semibold" backgroundHover="hover:bg-slate-400" wSize="1/2" />
+          </div>
         </div>
-        <div className="flex flex-col items-center py-10">
-          <Button onClick={handleClick} label="Ver todos as acomodações" background="bg-green-500" backgroundHover="hover:bg-blue-600" wSize="1/2" />
-        </div>
-      </div>
       </div>
 
       <div id="contato" className="mx-auto max-w-screen-lg my-3">
 
-          <SliderDepoimentos  />
+        <SliderDepoimentos />
 
-            <div className="flex justify-center">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118267.54058485657!2d-47.554339932599454!3d-22.131288421826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7e28d80df514f%3A0xb31327fae98d4f34!2sHotel%20Marina%20do%20Lago!5e0!3m2!1spt-BR!2sbr!4v1723134597327!5m2!1spt-BR!2sbr" width="600" height="300" className="w-11/12" loading="lazy"></iframe>
-            </div>
-            </div>
-          
+        <div className="flex justify-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118267.54058485657!2d-47.554339932599454!3d-22.131288421826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7e28d80df514f%3A0xb31327fae98d4f34!2sHotel%20Marina%20do%20Lago!5e0!3m2!1spt-BR!2sbr!4v1723134597327!5m2!1spt-BR!2sbr" width="600" height="300" className="w-11/12" loading="lazy"></iframe>
+        </div>
+      </div>
+
 
     </main>
   );

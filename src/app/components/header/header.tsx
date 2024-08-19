@@ -33,7 +33,7 @@ const Header = ({
             <div className="mx-auto max-w-screen-lg h-full">
                 <div className="flex flex-row justify-between items-center py-5">
                     <Link href={logo.logoPadrão.url} className="mx-2">
-                        <Image src={logo.logoPadrão.src} alt={logo.logoPadrão.alt} width={200} height={100} />
+                        <Image src={"/images/logoheader.png"} alt={logo.logoPadrão.alt} width={200} height={100} />
                     </Link>
 
                     <div className="block sm:hidden">
@@ -59,10 +59,11 @@ const Header = ({
 
 
                     <div className="hidden sm:block">
-                    <div className="flex flex-row space-x-5 ">
+                    <div className="flex flex-row items-center space-x-5 ">
                         {navLinks.map((navfn ,index) => (
                             <Link key={index} href={navfn.url}>{navfn.label}</Link>
                         ))}
+                        <Link href={'#'} className="bg-white rounded-md p-1 text-black">Reservar Quarto</Link>
                         </div>
                     </div>
                 </div>  

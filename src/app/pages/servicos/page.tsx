@@ -14,48 +14,60 @@ const Serviços = () => {
     }
 
     const labels = [
-        { label: "Estacionamento gratuito" },
-        { label: "Piscinas" },
-        { label: "Academia" },
-        { label: "Bar" },
-        { label: "Restaurante" },
-        { label: "Prainha" },
-        { label: "Caiques" },
-        { label: "Redes de descanso" },
-        { label: "Sala de jogos" },
-        { label: "Tv via satelite" },
-        { label: "Campo de futebol" },
-        { label: "Campo de volei" },
-        { label: "Pesca no lago" },
-        { label: "Pensão completa" }
+        {   icons: "/images/servicos/icons/pescaria.png",
+            label: "Estacionamento gratuito" },
+        {   icons: "/images/servicos/icons/natacao.png",
+            label: "Piscinas" },
+        {   icons: "/images/servicos/icons/academia.png",
+            label: "Academia" },
+        {   icons: "/images/servicos/icons/cerveja.png",
+            label: "Bar" },
+        {   icons: "/images/servicos/icons/restaurante.png",
+            label: "Restaurante" },
+        {   icons: "/images/servicos/icons/praia.png",
+            label: "Prainha" },
+        {   icons: "/images/servicos/icons/pescaria.png",
+            label: "Caiques" },
+        {   icons: "/images/servicos/icons/pescaria.png",
+            label: "Redes de descanso" },
+        {   icons: "/images/servicos/icons/bilhar.png",
+            label: "Sala de jogos" },
+        {   icons: "/images/servicos/icons/televisao.png",
+            label: "Tv via satelite" },
+        {   icons: "/images/servicos/icons/bola.png",
+            label: "Campo de futebol" },
+        {   icons: "/images/servicos/icons/voleibol.png",
+            label: "Campo de volei" },
+        {   icons: "/images/servicos/icons/pescaria.png",
+            label: "Pesca no lago" },
+        {   icons: "/images/servicos/icons/pescaria.png",
+            label: "Pensão completa" }
     ]
 
     return (
-        <div className="w-screen bg-center bg-[url('/images/testefundo2.png')]">
         <div className="max-w-screen-lg mx-auto">
 
             <div className="grid grid-cols-5 gap-3 my-10 py-10">
-                {labels.map((labels, index) => (
-                    <CardSimple key={index} label={labels.label} />
+                {labels.map((items, index) => (
+                    <CardSimple key={index} label={items.label} icons={items.icons} />
                 ))}
             </div>
             
             <div className="my-10 py-10">
-                <h1 className="text-6xl text-blue-500 font-Caveat">Atividades Externa</h1>
+                <h1 className="text-6xl bg-white text-blue-500 font-Caveat">Atividades Externa</h1>
                 <Slider constSrc="photosExterna"/>
             </div>
             
             <div className="my-10 py-10">
-                <h1 className="text-6xl text-blue-500 font-Caveat">Espaços para Alimentação</h1>
+                <h1 className="text-6xl bg-white text-blue-500 font-Caveat">Espaços para Alimentação</h1>
                 <Slider constSrc="photosAlimentacao"/>
             </div>
 
             <div className="my-10 py-10">
-                <h1 className="text-6xl text-blue-500 font-Caveat">Pensão completa</h1>
+                <h1 className="text-6xl bg-white text-blue-500 font-Caveat">Pensão completa</h1>
                 <Slider constSrc="photosComida"/>
             </div>
         </div>
-    </div>
     );
 }
 

@@ -35,12 +35,8 @@
                 "url": "/pages/servicos"
             },
             {
-                "label": "Sobre nós",
+                "label": "Institucional",
                 "url": "/pages/sobre_nos"
-            },
-            {
-                "label": "Contato",
-                "url": "/pages/sobre_nos#contato"
             }
         ],    
         "institucional":[

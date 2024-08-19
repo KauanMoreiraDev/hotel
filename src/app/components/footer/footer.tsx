@@ -22,9 +22,9 @@ const Footer = ({
     return (
         <footer className={`${background} ${textColor} ${wSize} ${hSize}`} >
             <div className="mx-auto max-w-screen-lg min-h-full p-5">
-                <div className="flex flex-col items-start sm:flex-row sm:space-x-12">
+                <div className="flex flex-col items-start sm:flex-row sm:justify-center sm:space-x-5">
                     <div className="flex flex-col items-center sm:items-start text-black font-medium">
-                        <Image src={logo.logoPadrão.src} alt={logo.logoPadrão.alt} width={350} height={350} className="mx-1" />
+                        <Image src={logo.logoPadrão.src} alt={logo.logoPadrão.alt} width={350} height={350} className="px-1" />
                         <p>Av. Rodolpho Morelli, 2016</p>
                         <p>Zona Rural, Santa Cruz da Conceição - SP</p>
                         <p> CEP-13629-022</p>
@@ -43,7 +43,7 @@ const Footer = ({
             </div>
             <div className="flex flex-col items-center p-3">
                 <p>(19) 97124-0437</p>
-                <RedesSociais sizeIcon="text-3xl" sizeIconSm="text-xl" />
+                <RedesSociais sizeIcon="text-3xl" sizeIconSm="text-xl" textColor="text-black" />
 
                 <p>Todos os direitos reservados 2024</p>
                 <Link href="https://portfoliokdev.netflify.app" target="_blank" className="font-medium text-lg text-black hover:text-violet-700">Desenvolvido por Kdev</Link>

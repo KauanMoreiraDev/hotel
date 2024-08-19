@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className="scroll-smooth">
-      <body className={inter.className}>
+      <body className={`${inter.className} w-screen bg-[url('/images/testefundo2.png')]`}>
         <Header background="bg-blue-400" textColor="text-white" wSize="min-w-screen" hSize="h-full" />
         {children}
         <Footer wSize="min-w-screen" background="bg-blue-400" textColor="text-white"/>

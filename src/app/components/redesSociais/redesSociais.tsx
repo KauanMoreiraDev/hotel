@@ -5,11 +5,12 @@ import React from "react";
 interface IconProps {
   sizeIcon?: string;
   sizeIconSm?: string;
+  textColor?: string
 }
 
 export default function RedesSociais({
   sizeIcon = "text-3xl",
-  sizeIconSm,
+  sizeIconSm, textColor = "text-lime-500"
 }: IconProps) {
   const contato = [
     {
@@ -60,7 +61,7 @@ export default function RedesSociais({
               key={index}
               href={cttfn.link}
               target="_blank"
-              className="rounded-full text-black hover:text-slate-800 hover:scale-125">
+              className={`rounded-full ${textColor} hover:text-slate-800 hover:scale-125`}>
               <i className={cttfn.iconSm} />
             </Link>
           ))}

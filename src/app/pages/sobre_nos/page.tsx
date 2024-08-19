@@ -10,7 +10,7 @@ const About =  () => {
         <div className="mx-auto max-w-screen-lg">
             <div className="p-7">
                 <h1 className="font-Caveat text-blue-500 text-6xl mb-5">Quem somos?</h1>
-                <p>
+                <p className="bg-white">
                 O Hotel Marina do Lago, situado à beira do lago, oferece uma experiência única que combina conforto e respeito pelo meio ambiente. Proporcionamos lazer e descanso em acomodações de excelência, sempre com foco na preservação ambiental e na satisfação dos nossos hóspedes. Buscamos ser referência no turismo nacional, destacando-nos pelo conforto, segurança e harmonia com a natureza. Valorizamos qualidade de vida, ética e atendimento personalizado, mantendo nosso compromisso com a responsabilidade socioambiental. No Hotel Marina do Lago, cada detalhe é pensado para tornar sua estadia memorável.
                 </p>
             </div>
@@ -18,7 +18,7 @@ const About =  () => {
                 <div className="mx-auto max-w-screen-lg">
                 <div className="flex flex-col items-center">
                     <Image src={logo.logoImagem.src} alt={logo.logoImagem.alt} width={270} height={270} />
-                    <RedesSociais />
+                    <RedesSociais textColor="text-black" />
                     <div className="flex flex-col items-center m-2 p-1">
                             <p>Av. Rodolpho Morelli, 2016</p>
                             <p>Zona Rural, Santa Cruz da Conceição - SP</p>
