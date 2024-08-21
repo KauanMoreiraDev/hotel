@@ -1,86 +1,37 @@
-import Data from "@/app/components/data/data.json"
+'use client'
+
 import Image from "next/image";
 import Button from "../button/button";
-import SliderChale from "../slide/slider";
+import SliderImages from "../sliderImages/slider";
 
-interface CardProps {
-    leftPosition?: boolean
-    isImage?: boolean
-    indexNumber: number
-    onClickButton: () => void
-    title?: string
-    subTitle?: string
-    label?: string
-    labelButton: string
+interface CardProps{
+    backgroundColor?: string;
+    hover?: string;
+    srcImage?: string;
+    titleFont?: string;
+    titleColor?: string;
+    titleLabel?: string;
+    label?: string;
+    colorButoon?: string;
+    onclick: () => void
 }
 
-const { photos } = Data
+const CardQuartos = ({ backgroundColor = "bg-slate-400", hover = "bg-slate-600", srcImage, titleFont, titleColor, titleLabel = "Titulo aqui",label = "escreva seu texto aqui", colorButoon = "bg-white", onclick } : CardProps) => {
 
-
-const CardQuartos = ({ leftPosition = true, isImage = true, indexNumber, onClickButton, title = "Titulo", subTitle = "Sub Title", labelButton = "Button", label = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis similique velit dolor tempore amet vitae odit sapiente exercitationem voluptatem veritatis, sed, incidunt nulla officiis quas cupiditate? Consectetur earum amet obcaecati." }: CardProps) => {
-
-    const IndexDinamic = indexNumber
-    
-    const handleClick = onClickButton
-
-    const handClick = () => {
-        console.log(`informações sobre ${photos[indexNumber].alt}`)
-    }
-
-    return (
-        <div className="min-h-[75vh] ">
-            {leftPosition ?
-                <div className="flex flex-col sm:flex-row ">
-                    <div className="w-full sm:w-1/2 flex justify-stretch px-5">
-                        <div className="flex flex-col justify-center items-center sm:items-start">
-                            <div className="bg-white h-1/3 px-2 m-1">
-                                <div className="flex flex-col justify-evenly items-center sm:items-start h-full">
-                                    <p className="font-Caveat text-6xl text-blue-400">{title}</p>
-                                    <p className="font-Caveat text-2xl">{subTitle}</p>
-                                </div>
+    return(
+                    <div className={`w-full h-full p-2 m-3`}>
+                        <div className="flex flex-row items-center h-4/5">
+                            <div className="w-1/2">
+                                <SliderImages constSrc="photosChalé"/>
+                                {/* <Image src={`/images/chalé.png`} alt="teste" width={500} height={500} className="h-4/5 rounded-r-[90px] rounded-3xl z-20" /> */}
                             </div>
-                            {isImage ? <Image src={photos[IndexDinamic].url} alt={photos[indexNumber].alt} width={300} height={250} className="w-full mx-auto px-1 sm:w-6/12 rounded-2xl block sm:hidden" /> : <SliderChale rounded="rounded-2xl" width="w-full" smWidth="sm:w-6/12" className="block sm:hidden" />}
-                            <div className="bg-blue-300 rounded-2xl">
-                                <div className="h-1/3 m-1 p-2">
-                                    <div className="text-justify flex flex-col justify-evenly items-center h-full w-full">
-                                        {label}
-                                        <Button onClick={handleClick} label={labelButton} wSize="w-full" background="bg-green-500" />
-                                    </div>
-                                </div>
+                            <div className={`${backgroundColor} w-full h-full pl-24 -ml-20 p-10 rounded-r-3xl`}>
+                                <p className={`${titleFont} text-5xl ${titleColor} mb-2 pb-1`}>{titleLabel}</p>
+                                    <p className="mb-2 pb-1 text-base min-h-[5em]">{label}</p>
+                                <Button onClick={onclick} textColor="text-white" textSize="text-lg" label={"Saiba mais"} wSize="w-full" background={`${colorButoon}`} backgroundHover={`${hover}`} />
                             </div>
                         </div>
                     </div>
-                    {isImage ? <Image src={photos[IndexDinamic].url} alt={photos[indexNumber].alt} width={300} height={250} className="w-full mx-4 px-1 sm:w-6/12 rounded-2xl hidden sm:block" /> : <SliderChale rounded="rounded-2xl" smWidth="w-6/12" className="hidden sm:block"/>}
-                </div>
-
-                :
-
-                <div className="flex flex-col sm:flex-row ">
-
-                    {isImage ? <Image src={photos[IndexDinamic].url} alt={photos[indexNumber].alt} width={300} height={250} className="w-full mx-4 px-1 sm:w-6/12 rounded-2xl hidden sm:block" /> : <SliderChale rounded="rounded-2xl" smWidth="w-6/12" className="hidden sm:block"/>}
-
-                    <div className="w-full sm:w-1/2 flex justify-stretch px-5">
-                        <div className="flex flex-col justify-center items-center sm:items-end">
-                            <div className="bg-white h-1/3 px-2 m-1">
-                                <div className="flex flex-col justify-evenly items-center sm:items-end h-full">
-                                    <p className="font-Caveat text-6xl text-blue-400">{title}</p>
-                                    <p className="font-Caveat text-2xl">{subTitle}</p>
-                                </div>
-                            </div>
-                            {isImage ? <Image src={photos[IndexDinamic].url} alt={photos[indexNumber].alt} width={300} height={250} className="w-full px-1 sm:w-6/12 rounded-2xl mx-auto block sm:hidden" /> : <SliderChale rounded="rounded-2xl" smWidth="w-6/12" className="block sm:hidden" />}
-                            <div className="bg-blue-300 rounded-2xl">
-                                <div className="h-1/3 m-1 p-2">
-                                    <div className="text-justify flex flex-col justify-evenly items-center h-full w-full">
-                                        {label}
-                                        <Button onClick={handClick} label="Saiba mais" wSize="w-full" background="bg-green-500" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
     );
 }
 

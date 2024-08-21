@@ -80,15 +80,15 @@ const Slider = ({rounded, width = "w-1/2", smWidth = "w-full", className} : Slid
             <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
                 
                     {labels.map((labels, index) => (
-                        <div key={index} className="flex-shrink-0 w-1/4">
-                            <CardSimple icons={labels.icons} label={labels.label} width="1/2"/>
+                        <div key={index} className="flex-shrink-0 w-1/5">
+                            <CardSimple icons={labels.icons} label={labels.label} width="1/3"/>
                         </div>
                     ))}
                 </div>
             
 
-            <button onClick={prevSlide} className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 flex justify-start items-center w-1/12 h-full opacity-100"><ChevronLeftIcon className="text-white" /></button>
-            <button onClick={nextSlide} className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 flex justify-end items-center w-1/12 h-full opacity-100"><ChevronRightIcon className="text-white" /></button>
+            <button onClick={prevSlide} className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 flex justify-start items-center w-1/12 h-full opacity-100"><ChevronLeftIcon className="text-black font-semibold" /></button>
+            <button onClick={nextSlide} className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 flex justify-end items-center w-1/12 h-full opacity-100"><ChevronRightIcon className="text-black font-semibold" /></button>
         </div>
 
     );

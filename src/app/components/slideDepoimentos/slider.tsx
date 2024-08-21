@@ -17,27 +17,27 @@ const labels = [
 
     {   
         ranking: 4,
-        nome: "Paula Tejando",
+        nome: "Gretchen",
         label: "Trabalho com excursão e fui duas vezes este ano eu e meus clientes gostamos muito ambiente familiar comidas boas lugar top"
     },
     {   
         ranking: 4,
-        nome: "Tomás Turbando",
+        nome: "Thomas Edisom",
         label: "Local com excelente vista, natureza e aconchegante! Ótimo ambiente, ideal para família e convenções! Super recomendo!"
     },
     {   
         ranking: 5,
-        nome: "Oscar Alho",
+        nome: "Pelézinho",
         label: "Nossa amei conhecer este lugar, muito bom, natureza perfeita lugar maravilhoso pra passear com família,estive aí com o grupo da terceira idade Lua Nova, funcionários maravilhosos muito educados e simpáticos,eu recomendo com certeza"
     },
     {   
         ranking: 4,
-        nome: "Paula Noku",
+        nome: "Serjão Berranteiro",
         label: "Lugar maravilhoso em meio a natureza. Piscina para lazer, playground, lago para andar de jet sky e também ótimo local para se hospedar. Fácil acesso pela rodovia anhanguera."
     },
     {   
         ranking: 4,
-        nome: "Cuca Beludo",
+        nome: "Mestre Miague",
         label: "Fui no Dia das Mães para um day use e achei o lugar bonito e tranquilo. Há piscinas para adultos e crianças, uma 'prainha', e uma sala de jogos com bilhar e ping pong. A comida é simples, mas boa, e os funcionários foram muito atenciosos. Minha mãe adorou, o que já valeu a pena. Continuem com o bom serviço. Deus abençoe."
     },
 ]

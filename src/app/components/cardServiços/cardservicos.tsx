@@ -24,7 +24,7 @@ const CardServiços = ({width = "full", backgroundColor = "bg-slate-400", hover 
                             <Image src={`/images/chalé.png`} alt="teste" width={500} height={300} className="w-full rounded-b-[90px] rounded-t-3xl z-20" />
                             <div className={`${backgroundColor} w-full z-10  pt-24 -mt-20 p-7 rounded-b-3xl`}>
                                 <p className={`${titleFont} text-5xl ${titleColor} mb-2 pb-1`}>{titleLabel}</p>
-                                    <p className="mb-2 pb-1 text-lg min-h-[5em]">{label}</p>
+                                    <p className="mb-2 pb-1 text-base min-h-[5em]">{label}</p>
                                 <Button onClick={onclick} textColor="text-white" textSize="text-lg" label={"Saiba mais"} wSize="w-full" background={`${colorButoon}`} backgroundHover={`${hover}`} />
                             </div>
                         </div>

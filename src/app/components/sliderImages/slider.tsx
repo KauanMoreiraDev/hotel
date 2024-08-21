@@ -6,12 +6,14 @@ import { useEffect, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 
 interface SliderProps{
-    constSrc: "photosExterna" | "photosAlimentacao" | "photosComida"
+    constSrc: "photosExterna" | "photosAlimentacao" | "photosComida" | "photosChalé"
 }
 
 const handleClick = () => {
     console.log('você entrou em contato')
 }
+
+const { photosChale } = Data;
 
 const photosExterna = [
     { src: "/images/servicos/pesca.jpg"},
@@ -49,7 +51,7 @@ const Slider = ({constSrc} : SliderProps) => {
         return () => clearInterval(interval);
     }, []);
 
-    const numberImagens = constSrc === "photosExterna" ? photosExterna : constSrc === "photosAlimentacao" ? photosAlimentacao : photosComida.slice(0, 7)
+    const numberImagens = constSrc === "photosExterna" ? photosExterna : constSrc === "photosAlimentacao" ? photosAlimentacao : constSrc === "photosComida" ? photosComida : photosChale.slice(0, 7)
 
     const nextSlide = () => {
         setCurrent((prev) => (prev === numberImagens.length - 1 ? 0 : prev + 1));
@@ -60,7 +62,8 @@ const Slider = ({constSrc} : SliderProps) => {
     };
 
     return (
-        <div className="relative mx-auto overflow-hidden max-w-screen-lg h-[70vh] rounded-3xl shadow-xl">
+        <div className="relative mx-auto overflow-hidden max-w-screen-lg h-full rounded-3xl shadow-xl"> 
+        {/* h-[70vh] */}
             <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
                 {numberImagens.map((photos, index) => (
                     <Image key={index} src={photos.src} alt={`Slide ${index}`} width={1500} height={1500} className="w-full h-full object-cover flex-shrink-0 " />

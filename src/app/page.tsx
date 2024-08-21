@@ -34,7 +34,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/images/drone1.jpg')] bg-cover blur-sm"></div>
         <div className="relative flex flex-col justify-center items-center w-full min-h-full z-10">
 
-          <Image src={"/images/logo.png"} alt="" width={1200} height={1200} className="w-1/3 h-1/3 py-8" />
+          <Image src={"/images/logoazul.png"} alt="" width={1200} height={1200} className="w-1/3 h-1/3 py-8" />
           <RedesSociais textColor="text-slate-950" />
           <Button onClick={handleClick} label="Reservar já" background="bg-blue-500" backgroundHover="hover:bg-blue-600" textColor="text-white" textSize="font-semibold" />
 
@@ -48,7 +48,7 @@ export default function Home() {
             <div className="bg-blue-400 w-4/5 h-full absolute top-4 -left-4 -z-10" />
           </div>
           <div className="w-11/12 sm:w-1/2 h-full">
-            <div className="flex flex-col text-justify text-lg bg-white rounded-3xl">
+            <div className="flex flex-col text-justify text-base bg-white rounded-3xl">
               Localizado à beira do lago, o Hotel Marina do Lago oferece conforto e qualidade com foco na preservação ambiental. Proporciona uma experiência íntima com a natureza, lazer, entretenimento e diversas opções de hospedagem. Nosso objetivo é garantir a satisfação dos clientes com serviços de excelência e responsabilidade ambiental. Buscamos ser reconhecidos nacionalmente por nossa excelência em turismo, conforto e segurança, mantendo harmonia com a natureza, e valorizamos segurança, qualidade de vida, profissionalismo, ética, atendimento personalizado e responsabilidade socioambiental.
             </div>
             <div className="flex flex-row justify-end">

@@ -86,23 +86,23 @@
     "photosChale":[
         {
             "alt": "Vista da sala 1",
-            "url": "/images/quartos/chalé/img2.jpg"
+            "src": "/images/quartos/chalé/img2.jpg"
         },
         {
             "alt": "Vista da sala 2",
-            "url": "/images/quartos/chalé/img3.jpg"
+            "src": "/images/quartos/chalé/img3.jpg"
         },
         {
             "alt": "Vista do quarto",
-            "url": "/images/quartos/chalé/img4.jpg"
+            "src": "/images/quartos/chalé/img4.jpg"
         },
         {
             "alt": "Vista da cozinha",
-            "url": "/images/quartos/chalé/img5.jpg"
+            "src": "/images/quartos/chalé/img5.jpg"
         },
         {
             "alt": "Vista do quarto",
-            "url": "/images/quartos/chalé/img6.jpg"
+            "src": "/images/quartos/chalé/img6.jpg"
         }
     ]
 

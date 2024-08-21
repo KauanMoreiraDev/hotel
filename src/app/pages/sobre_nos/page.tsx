@@ -19,7 +19,7 @@ const About =  () => {
                 <div className="flex flex-col items-center">
                     <Image src={logo.logoImagem.src} alt={logo.logoImagem.alt} width={270} height={270} />
                     <RedesSociais textColor="text-black" />
-                    <div className="flex flex-col items-center m-2 p-1">
+                    <div className="flex flex-col items-center m-2 p-1 bg-white rounded-3xl">
                             <p>Av. Rodolpho Morelli, 2016</p>
                             <p>Zona Rural, Santa Cruz da Conceição - SP</p>
                             <p> CEP-13629-022</p>
