@@ -51,14 +51,16 @@ const Slider = ({rounded, width = "w-1/2", smWidth = "w-full", className} : Slid
         console.log("teste")
     }
     
-        useEffect(() => {
-            const interval = setInterval(nextSlide, 3500);
+        // useEffect(() => {
+        //     const interval = setInterval(nextSlide, 3500);
             
-            return () => clearInterval(interval);
-        }, []);
+        //     return () => clearInterval(interval);
+        // }, []);
     
+    const largeSize = window.innerWidth;
+
     const [current, setCurrent] = useState(0);
-    const itemsToShow = 4;
+    const itemsToShow = largeSize <= 640 ? 2 : 5 ;
     const totalItems = labels.length;
     const totalPages = Math.ceil(totalItems / itemsToShow);
 
@@ -80,7 +82,7 @@ const Slider = ({rounded, width = "w-1/2", smWidth = "w-full", className} : Slid
             <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
                 
                     {labels.map((labels, index) => (
-                        <div key={index} className="flex-shrink-0 w-1/5">
+                        <div key={index} className="flex-shrink-0 w-1/2 sm:w-1/5">
                             <CardSimple icons={labels.icons} label={labels.label} width="1/3"/>
                         </div>
                     ))}

@@ -22,19 +22,19 @@ const Footer = ({
     return (
         <footer className={`${background} ${textColor} ${wSize} ${hSize}`} >
             <div className="mx-auto max-w-screen-lg min-h-full p-5">
-                <div className="flex flex-col items-start sm:flex-row sm:justify-center sm:space-x-5">
+                <div className="flex flex-col items-center sm:flex-row sm:justify-center sm:items-start sm:space-x-5">
                     <div className="flex flex-col items-center sm:items-start text-black font-medium">
                         <Image src={logo.logoPadrão.src} alt={logo.logoPadrão.alt} width={350} height={350} className="px-1" />
                         <p>Av. Rodolpho Morelli, 2016</p>
                         <p>Zona Rural, Santa Cruz da Conceição - SP</p>
                         <p> CEP-13629-022</p>
                     </div>
-                    <div className="flex flex-col items-start p-2">
+                    <div className="flex flex-col items-center sm:items-start p-2">
                         {navLinks.map((navfn, index) => (
                             <Link key={index} href={navfn.url} className=" m-1">{navfn.label}</Link>
                         ))}
                     </div>
-                    <div className="flex flex-col items-start p-2">
+                    <div className="flex flex-col items-center sm:items-start p-2">
                         {institucional.map((institucional, index) => (
                             <Link key={index} href={institucional.url} target="_blank" className=" m-1">{institucional.label}</Link>
                         ))}
