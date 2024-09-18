@@ -36,7 +36,7 @@ export default function Home() {
 
           <Image src={"/images/logo.png"} alt="" width={1200} height={1200} className="w-4/5 h-4/5 sm:w-1/3 sm:h-1/3 py-8" />
           <RedesSociais textColor="text-slate-950" />
-          <Button onClick={handleClick} label="Reservar já" background="bg-blue-500" backgroundHover="hover:bg-blue-600" textColor="text-white" textSize="font-semibold" wSize="w-1/2" smWSize="sm:w-2/12"/>
+          <Button onClick={handleClick} label="Reservar já" background="bg-blue-500" backgroundHover="hover:bg-blue-600" textColor="text-white" textSize="font-semibold" wSize="w-1/2" smWSize="sm:w-2/12" />
 
         </div>
       </div>
@@ -69,8 +69,8 @@ export default function Home() {
 
       <div className="Locais hotel bg-blue-300 w-screen ">
         <div className="bg-[url('/images/testefundoazul.png')] bg-cover bg-center w-screen ">
-          <div className="grid grid-cols-2 max-w-screen-lg mx-auto">
-            
+          <div className="grid grid-cols-1 sm:grid-cols-3 max-w-screen-lg mx-auto">
+
             <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Chalés" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nosso Chalé é do tipo Suíço e bem aconchegante" onclick={GoToAcomodacoes} />
 
             <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Suítes" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nossas suítes trazem o conforto que você precisa para relaxar" onclick={GoToAcomodacoes} />
@@ -89,7 +89,9 @@ export default function Home() {
 
       <div id="contato" className="mx-auto max-w-screen-lg my-3">
 
-        <SliderDepoimentos />
+        <div className="mx-auto w-full">
+          <SliderDepoimentos width="w-10/12" />
+        </div>
 
         <div className="flex justify-center">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118267.54058485657!2d-47.554339932599454!3d-22.131288421826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7e28d80df514f%3A0xb31327fae98d4f34!2sHotel%20Marina%20do%20Lago!5e0!3m2!1spt-BR!2sbr!4v1723134597327!5m2!1spt-BR!2sbr" width="600" height="300" className="w-11/12" loading="lazy"></iframe>

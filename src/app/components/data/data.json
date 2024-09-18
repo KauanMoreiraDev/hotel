@@ -5,6 +5,11 @@
             "alt": "Logo da Empresa",
             "url": "/"
         },
+        "logoHeader": {
+            "src": "/images/logoheader.png",
+            "alt": "Logo da Empresa",
+            "url": "/"
+        },
         "logoAzul": {
             "src": "/images/logoazul.png",
             "alt": "Logo da Empresa",

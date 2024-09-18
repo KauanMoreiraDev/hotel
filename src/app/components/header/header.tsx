@@ -1,72 +1,72 @@
 'use client'
 
-import Image from "next/image";
 import Data from "@/app/components/data/data.json";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
+import { Menu, X } from "lucide-react"
 
-interface headerProps {
-    background? : string;
-    textColor? : string;
-    wSize? : string;
-    hSize? : string;
-}
+const { logo, navLinks } = Data
 
-const Header = ({
-    background = 'bg-slate-500',
-    textColor = 'text-black',
-    wSize = 'w-screen',
-    hSize = 'h-14',
-}: headerProps ) => {
+const Header = () => {
 
-    const { logo, navLinks } = Data;
+    const [open, setOpen] = useState(true);
 
-    const [open, setOpen] = useState(true)
+    const menuMobile = () => {
+        setOpen(!open)
+    }
 
-    const navClose = () => {
-        setOpen(true)
-    }      
+    const Close = () => {
+        setOpen(!open)
+    }
 
-    return(
-        <header className={`sticky top-0 z-50 ${background} ${textColor} ${wSize} ${hSize}`} >
-            <div className="mx-auto max-w-screen-lg h-full">
-                <div className="flex flex-row justify-between items-center py-5">
-                    <Link href={logo.logoPadrão.url} className="mx-2">
-                        <Image src={"/images/logoheader.png"} alt={logo.logoPadrão.alt} width={200} height={100} />
-                    </Link>
+    return (
 
-                    <div className="block sm:hidden">
-                        <button onClick={() => setOpen(!open)} className="z-10 flex items-center justify-center w-10 h-10 fixed top-1 right-0 m-4">
-                                    <div className={`transition-transform duration-1000 ${open ? 'rotate-180' : ''}`}>
-                                        {open ? <HamburgerMenuIcon className="w-10 h-10" /> : <Cross1Icon className="w-10 h-10" />}
+        <header className={`w-screen sticky top-0 z-50 bg-blue-400`}>
+
+            <div className="Mobile">
+                <div className="block sm:hidden">
+                    <div className="w-full h-full ">
+                        <div className="flex flex-row items-center justify-center py-1">
+                            <Link href={logo.logoPadrão.url}>
+                                <Image src={logo.logoHeader.src} alt={logo.logoHeader.alt} width={1000} height={1000} className="w-2/5" />
+                            </Link>
+
+                            <button onClick={menuMobile} className="z-30 pl-5">
+                                {open ? <Menu /> : <X />}
+                            </button>
+                            {!open && (
+                                <div className={`w-screen h-screen absolute top-0 text-white bg-blue-400`}>
+                                    <div className="flex flex-col items-center justify-between py-20">
+                                        {navLinks.map((items, index) => (
+                                            <Link key={index} href={items.url} className="py-3" onClick={menuMobile}>{items.label}</Link>
+                                        ))}
                                     </div>
-                                </button>
-                                {!open && (
-                                        <div className="w-screen h-screen">
-                                            <div className="bg-blue-300 opacity-70 absolute inset-0">
-
-                                                <nav className="flex flex-col items-center space-y-6 py-6">
-                                                    <Link href={logo.logoPadrão.url} onClick={navClose}>Início</Link>
-                                                    {navLinks.map((navfn ,index) => (
-                                                        <Link key={index} href={navfn.url} onClick={navClose}>{navfn.label}</Link>
-                                                    ))}
-                                                </nav>
-                                            </div>
-                                        </div>
-                                    )}
-                    </div>
+                                </div>
+                            )}
 
 
-                    <div className="hidden sm:block">
-                    <div className="flex flex-row items-center space-x-5 ">
-                        {navLinks.map((navfn ,index) => (
-                            <Link key={index} href={navfn.url}>{navfn.label}</Link>
-                        ))}
-                        <Link href={'#'} className="bg-white rounded-md p-1 text-black">Reservar Quarto</Link>
                         </div>
                     </div>
-                </div>  
+                </div>
+            </div>
+
+            <div className="desktop">
+                <div className="hidden sm:block">
+                    <div className="mx-auto max-w-screen-lg">
+                        <div className="flex flex-row items-center justify-evenly">
+                            <Link href={logo.logoPadrão.url} className="w-2/5">
+                                <Image src={logo.logoHeader.src} alt={logo.logoHeader.alt} width={1000} height={1000} className="w-3/5" />
+                            </Link>
+                            <div className="Links">
+                                {navLinks.map((items, index) => (
+                                    <Link key={index} href={items.url} className="px-3 text-white">{items.label}</Link>
+                                ))}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
     );

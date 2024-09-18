@@ -1,7 +1,5 @@
 "use client";
 
-import Data from "@/app/components/data/data.json"
-import Image from 'next/image';
 import CardSimple from "../cardSimple/cardsimple";
 import { useEffect, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
@@ -47,15 +45,12 @@ const labels = [
 
 const Slider = ({rounded, width = "w-1/2", smWidth = "w-full", className} : SliderChaleProps) => {
 
-    const handleClick = () =>{
-        console.log("teste")
-    }
     
-        // useEffect(() => {
-        //     const interval = setInterval(nextSlide, 3500);
+        useEffect(() => {
+            const interval = setInterval(nextSlide, 3500);
             
-        //     return () => clearInterval(interval);
-        // }, []);
+            return () => clearInterval(interval);
+        }, []);
     
     const largeSize = window.innerWidth;
 

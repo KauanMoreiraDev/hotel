@@ -27,23 +27,23 @@ const CardQuartos = ({ backgroundColor = "bg-slate-400", hover = "bg-slate-600",
 
     return (
         <div className="my-5">
-            <div className="flex flex-row justify-center">
-                <div className="w-5/12">
-                    <SliderImages constSrc="photosChale" sizeQuarto="h-96" rounded="rounded-3xl rounded-r-[75px]" />
+            <div className="flex flex-col items-center sm:flex-row sm:justify-center p-5">
+                <div className="w-full h-1/2 sm:w-5/12">
+                    <SliderImages constSrc="photosChale" sizeQuarto="h-44 sm:h-96" rounded="rounded-3xl rounded-b-[75px] sm:rounded-bl-3xl sm:rounded-r-[75px]" />
                 </div>
-                <div className={`${backgroundColor} w-3/5 h-96 p-5 pl-24 -ml-20 rounded-3xl`}>
+                <div className={`${backgroundColor} w-full sm:w-3/5 h-full sm:h-96 p-5 pt-24 -mt-20 sm:pt-5 sm:-mt-0 sm:pl-24 sm:-ml-20 rounded-3xl`}>
                     <div className="flex flex-col justify-between h-full">
                         <div className={`text-5xl ${titleColor} ${titleFont}`}>{titleLabel}</div>
-                        <div className="flex flex-row flex-wrap items-center h-[10%]">
-                            <div className="h-[7%] py-2 pr-3 text-xs flex flex-nowrap"><LucideWifi className="w-4 h-4 " />Wi-fi</div>
-                            <div className="h-[7%] py-2 pr-3 text-xs flex flex-nowrap"><LucideRefrigerator className="w-4 h-4 " />Frigobar</div>
-                            <div className="h-[7%] py-2 pr-3 text-xs flex flex-nowrap"><LucideBed className="w-4 h-4 " />Cama box</div>
-                            <div className="h-[7%] py-2 pr-3 text-xs flex flex-nowrap"><LucideBath className="w-4 h-4 " />Banheiro</div>
-                            <div className="h-[7%] py-2 pr-3 text-xs flex flex-nowrap"><LucideTv className="w-4 h-4 " />Tv via satélite</div>
-                            <div className="h-[7%] py-2 pr-3 text-xs flex flex-nowrap"><LucideBed className="w-4 h-4 " />2 Quartos</div>
-                            <div className="h-[7%] py-2 pr-3 text-xs flex flex-nowrap"><LucideGroup className="w-4 h-4 " />Máx 7 pessoas</div>
+                        <div className="flex flex-row flex-wrap w-11/12">
+                            <div className=" py-2 pr-3 text-xs flex flex-nowrap"><LucideWifi className="w-4 h-4 " />Wi-fi</div>
+                            <div className=" py-2 pr-3 text-xs flex flex-nowrap"><LucideRefrigerator className="w-4 h-4 " />Frigobar</div>
+                            <div className=" py-2 pr-3 text-xs flex flex-nowrap"><LucideBed className="w-4 h-4 " />Cama box</div>
+                            <div className=" py-2 pr-3 text-xs flex flex-nowrap"><LucideBath className="w-4 h-4 " />Banheiro</div>
+                            <div className=" py-2 pr-3 text-xs flex flex-nowrap"><LucideTv className="w-4 h-4 " />Tv via satélite</div>
+                            <div className=" py-2 pr-3 text-xs flex flex-nowrap"><LucideBed className="w-4 h-4 " />2 Quartos</div>
+                            <div className=" py-2 pr-3 text-xs flex flex-nowrap"><LucideGroup className="w-4 h-4 " />Máx 7 pessoas</div>
                         </div>
-                        <div className="">{label}</div>
+                        <div className="py-2">{label}</div>
                         <Button onClick={onclick} background={colorButoon} backgroundHover={hover} label={"Reservar quarto"} wSize="w-full" hSize="h-1/6" />
                     </div>
                 </div>

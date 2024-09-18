@@ -73,7 +73,7 @@ const Slider = ({ rounded, width = "w-full", smWidth = "w-full", className }: Sl
     return (
         <div className={`relative overflow-hidden ${width} ${smWidth} h-full ${rounded} py-16 `}>
 
-            <button onClick={prevSlide} className="absolute z-10 top-1/2 left-0 p-2 mx-2 flex justify-start items-center rounded-full bg-slate-500"><ChevronLeftIcon className="text-white w-4 h-4" /></button>
+            <button onClick={prevSlide} className="absolute z-10 top-1/2 left-0 p-2 flex justify-start items-center rounded-full bg-slate-500"><ChevronLeftIcon className="text-white w-4 h-4" /></button>
 
             {/* perguntar para o gu sobre isso, comparação com o de baixo <div className={`flex transition-transform ease-in-out duration-500 transform:translate-x-${current * 100/itemsToShow}%`}> */}
 
@@ -84,12 +84,12 @@ const Slider = ({ rounded, width = "w-full", smWidth = "w-full", className }: Sl
                             <StarFilledIcon key={index} className="text-yellow-400 w-7 h-7" />
                         ))}</div>
                         <div className="py-2 text-lg flex items-center"><PersonIcon className="w-10 h-10"/>{items.nome}</div>
-                        <div className="p-2 h-24 flex items-center">{items.label}</div>
+                        <div className="p-2 h-24 ">{items.label}</div>
                     </div>
                 ))}
             </div>
 
-            <button onClick={nextSlide} className="absolute z-10 top-1/2 right-0 p-2 mx-2 flex justify-start items-center rounded-full bg-slate-500">
+            <button onClick={nextSlide} className="absolute z-10 top-1/2 right-0 p-2 flex justify-start items-center rounded-full bg-slate-500">
                 <ChevronRightIcon className="text-white w-4 h-4" />
             </button>
         </div>
