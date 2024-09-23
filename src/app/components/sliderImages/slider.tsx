@@ -61,11 +61,11 @@ const Slider = ({ constSrc, rounded = "rounded-3xl", sizeQuarto }: SliderProps) 
     };
 
     return (
-        <div className={`relative mx-auto overflow-hidden w-full h-full ${rounded} shadow-xl`}>
-            {/* h-[70vh] */}
+        <div className={`relative mx-auto overflow-hidden ${sizeQuarto} ${rounded} shadow-xl`}>
+            {/* h-[70vh]*/}
             <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
                 {numberImagens.map((photos, index) => (
-                    <Image key={index} src={photos.src} alt={`Slide ${index}`} width={1500} height={1500} className={`w-full ${constSrc === "photosChale" ? sizeQuarto : "h-full"} object-cover flex-shrink-0`} />
+                    <Image key={index} src={photos.src} alt={`Slide ${index}`} width={1500} height={1500} className={`w-full h-full object-cover flex-shrink-0`} />
                 ))}
             </div>
             <button onClick={prevSlide} className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 w-1/12 h-screen opacity-100"><ChevronLeftIcon className="text-white" /></button>

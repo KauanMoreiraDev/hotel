@@ -27,12 +27,12 @@ const Header = () => {
             <div className="Mobile">
                 <div className="block sm:hidden">
                     <div className="w-full h-full ">
-                        <div className="flex flex-row items-center justify-center py-1">
-                            <Link href={logo.logoPadrão.url}>
-                                <Image src={logo.logoHeader.src} alt={logo.logoHeader.alt} width={1000} height={1000} className="w-2/5" />
+                        <div className="flex flex-row items-center justify-around py-1">
+                            <Link href={logo.logoPadrão.url} className="w-1/3">
+                                <Image src={logo.logoHeader.src} alt={logo.logoHeader.alt} width={1000} height={1000} className="w-full" />
                             </Link>
 
-                            <button onClick={menuMobile} className="z-30 pl-5">
+                            <button onClick={menuMobile} className="z-30">
                                 {open ? <Menu /> : <X />}
                             </button>
                             {!open && (
@@ -54,9 +54,9 @@ const Header = () => {
             <div className="desktop">
                 <div className="hidden sm:block">
                     <div className="mx-auto max-w-screen-lg">
-                        <div className="flex flex-row items-center justify-evenly">
-                            <Link href={logo.logoPadrão.url} className="w-2/5">
-                                <Image src={logo.logoHeader.src} alt={logo.logoHeader.alt} width={1000} height={1000} className="w-3/5" />
+                        <div className="flex flex-row items-center justify-evenly py-2">
+                            <Link href={logo.logoPadrão.url} className="w-1/5">
+                                <Image src={logo.logoHeader.src} alt={logo.logoHeader.alt} width={1000} height={1000} className="w-full" />
                             </Link>
                             <div className="Links">
                                 {navLinks.map((items, index) => (

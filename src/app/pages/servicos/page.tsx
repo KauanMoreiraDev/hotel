@@ -15,7 +15,7 @@ const Serviços = () => {
 
     const labels = [
         {   icons: "/images/servicos/icons/pescaria.png",
-            label: "Estacionamento gratuito" },
+            label: "Estacionamento" },
         {   icons: "/images/servicos/icons/natacao.png",
             label: "Piscinas" },
         {   icons: "/images/servicos/icons/academia.png",
@@ -47,7 +47,7 @@ const Serviços = () => {
     return (
         <div className="max-w-screen-lg mx-auto">
 
-            <div className="grid grid-cols-5 gap-3 my-10 py-10">
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-10 sm:mt-10 px-5 pb-10 pt-5">
                 {labels.map((items, index) => (
                     <CardSimple key={index} label={items.label} icons={items.icons} />
                 ))}
@@ -55,17 +55,17 @@ const Serviços = () => {
             
             <div className="my-10 py-10">
                 <h1 className="text-6xl bg-white text-blue-500 font-Caveat">Atividades Externa</h1>
-                <Slider constSrc="photosExterna"/>
+                <Slider constSrc="photosExterna" sizeQuarto="h-[40vh] sm:h-[80vh]"/>
             </div>
             
             <div className="my-10 py-10">
                 <h1 className="text-6xl bg-white text-blue-500 font-Caveat">Espaços para Alimentação</h1>
-                <Slider constSrc="photosAlimentacao"/>
+                <Slider constSrc="photosAlimentacao" sizeQuarto="h-[40vh] sm:h-[80vh]"/>
             </div>
 
             <div className="my-10 py-10">
                 <h1 className="text-6xl bg-white text-blue-500 font-Caveat">Pensão completa</h1>
-                <Slider constSrc="photosComida"/>
+                <Slider constSrc="photosComida" sizeQuarto="h-[40vh] sm:h-[80vh]"/>
             </div>
         </div>
     );
