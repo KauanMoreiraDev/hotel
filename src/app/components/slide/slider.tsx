@@ -52,12 +52,12 @@ const Slider = ({rounded, width = "w-1/2", smWidth = "w-full", className} : Slid
             return () => clearInterval(interval);
         }, []);
     
-    const largeSize = window.innerWidth;
+    // const largeSize = window.innerWidth;
 
     const [current, setCurrent] = useState(0);
-    const itemsToShow = largeSize <= 640 ? 2 : 5 ;
+    // const itemsToShow = largeSize <= 640 ? 2 : 5 ;
     const totalItems = labels.length;
-    const totalPages = Math.ceil(totalItems / itemsToShow);
+    const totalPages = Math.ceil(totalItems);
 
     const nextSlide = () => {
         setCurrent((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
