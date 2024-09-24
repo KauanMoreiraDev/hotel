@@ -16,17 +16,17 @@ export default function Home() {
     console.log('aoba')
 
   }
-  const GoToSobreNos = () => {
-    window.location.href = ("/pages/sobre_nos")
-  }
+  // const GoToSobreNos = () => {
+  //   window.location.href = ("/pages/sobre_nos")
+  // }
 
-  const GoToAcomodacoes = () => {
-    window.location.href = ("/pages/acomodacoes")
-  }
+  // const GoToAcomodacoes = () => {
+  //   window.location.href = ("/pages/acomodacoes")
+  // }
 
-  const GoToServicos = () => {
-    window.location.href = ("/pages/servicos")
-  }
+  // const GoToServicos = () => {
+  //   window.location.href = ("/pages/servicos")
+  // }
 
   return (
     <main>
@@ -52,7 +52,7 @@ export default function Home() {
               Localizado à beira do lago, o Hotel Marina do Lago oferece conforto e qualidade com foco na preservação ambiental. Proporciona uma experiência íntima com a natureza, lazer, entretenimento e diversas opções de hospedagem. Nosso objetivo é garantir a satisfação dos clientes com serviços de excelência e responsabilidade ambiental. Buscamos ser reconhecidos nacionalmente por nossa excelência em turismo, conforto e segurança, mantendo harmonia com a natureza, e valorizamos segurança, qualidade de vida, profissionalismo, ética, atendimento personalizado e responsabilidade socioambiental.
             </div>
             <div className="flex flex-row justify-end">
-              <Button label="Entre em contato" onClick={GoToSobreNos} background="bg-green-400" backgroundHover="hover:bg-blue-500" wSize="w-full" smWSize="sm:w-1/3" />
+              <Button label="Entre em contato" onClick={handleClick} background="bg-green-400" backgroundHover="hover:bg-blue-500" wSize="w-full" smWSize="sm:w-1/3" />
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function Home() {
         <Slide />
         <div className="button">
           <div className="flex flex-row justify-center py-5">
-            <Button onClick={GoToServicos} label="Ver todos os serviços" textColor="text-white" textSize="font-semibold" background="bg-blue-400" backgroundHover="hover:bg-blue-600" wSize="1/2" />
+            <Button onClick={handleClick} label="Ver todos os serviços" textColor="text-white" textSize="font-semibold" background="bg-blue-400" backgroundHover="hover:bg-blue-600" wSize="1/2" />
           </div>
         </div>
       </div>
@@ -71,15 +71,15 @@ export default function Home() {
         <div className="bg-[url('/images/testefundoazul.png')] bg-cover bg-center w-screen ">
           <div className="grid grid-cols-1 sm:grid-cols-3 max-w-screen-lg mx-auto">
 
-            <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Chalés" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nosso Chalé é do tipo Suíço e bem aconchegante" onclick={GoToAcomodacoes} />
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Chalés" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nosso Chalé é do tipo Suíço e bem aconchegante" onclick={handleClick} />
 
-            <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Suítes" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nossas suítes trazem o conforto que você precisa para relaxar" onclick={GoToAcomodacoes} />
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-blue-600" titleFont="font-Caveat" titleLabel="Suítes" titleColor="text-blue-500" colorButoon="bg-blue-400" label="Nossas suítes trazem o conforto que você precisa para relaxar" onclick={handleClick} />
 
-            <CardServicos backgroundColor="bg-white" hover="hover:bg-yellow-600" titleFont="font-Caveat" titleLabel="DayUse" titleColor="text-yellow-500" colorButoon="bg-yellow-500" label="Desfrute de nossos serviços pagando uma singela diária" onclick={GoToAcomodacoes} />
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-yellow-600" titleFont="font-Caveat" titleLabel="DayUse" titleColor="text-yellow-500" colorButoon="bg-yellow-500" label="Desfrute de nossos serviços pagando uma singela diária" onclick={handleClick} />
 
-            <CardServicos backgroundColor="bg-white" hover="hover:bg-gray-600" titleFont="font-Caveat" titleLabel="Palestras" titleColor="text-gray-400" colorButoon="bg-gray-400" label="Sala ampla com carteiras para sua palestra" onclick={GoToAcomodacoes} />
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-gray-600" titleFont="font-Caveat" titleLabel="Palestras" titleColor="text-gray-400" colorButoon="bg-gray-400" label="Sala ampla com carteiras para sua palestra" onclick={handleClick} />
 
-            <CardServicos backgroundColor="bg-white" hover="hover:bg-green-600" titleFont="font-Caveat" titleLabel="Eventos" titleColor="text-green-500" colorButoon="bg-green-400" label="Utilize do nosso espaço para ter as melhores fotos do seu evento" onclick={GoToAcomodacoes} />
+            <CardServicos backgroundColor="bg-white" hover="hover:bg-green-600" titleFont="font-Caveat" titleLabel="Eventos" titleColor="text-green-500" colorButoon="bg-green-400" label="Utilize do nosso espaço para ter as melhores fotos do seu evento" onclick={handleClick} />
           </div>
           <div className="flex flex-col items-center py-10">
             <Button onClick={handleClick} label="Ver todos as acomodações" background="bg-white" textSize="font-semibold" backgroundHover="hover:bg-slate-400" wSize="1/2" />
